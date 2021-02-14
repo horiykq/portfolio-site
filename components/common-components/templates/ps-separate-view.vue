@@ -1,7 +1,7 @@
 <template>
   <div class="ps-seperate-view">
     <div class="ps-seperate-view__sidenav">
-      <ps-side-navigation></ps-side-navigation>
+      <ps-side-navigation />
     </div>
     <div class="ps-seperate-view__contents"></div>
   </div>

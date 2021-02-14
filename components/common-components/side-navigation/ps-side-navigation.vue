@@ -6,7 +6,11 @@
       :key="index"
       class="ps-side-navigation__links"
     >
-      <p>{{ page }}</p>
+      <ps-side-link
+        v-if="pages[page].visible"
+        :to="pages[page].path"
+        :label="pages[page].name"
+      ></ps-side-link>
     </div>
   </div>
 </template>
@@ -14,16 +18,19 @@
 <script lang="ts">
 import Vue from 'vue'
 import psSiteTitle from './ps-site-title.vue'
-import { pagesList } from '~/constants/index'
+import PsSideLink from './ps-side-link.vue'
+import { pages, pagesList } from '~/constants/index'
 
 type Data = {
+  pages: typeof pages
   pagesList: String[]
 }
 
 export default Vue.extend({
-  components: { psSiteTitle },
+  components: { psSiteTitle, PsSideLink },
   data(): Data {
     return {
+      pages,
       pagesList,
     }
   },

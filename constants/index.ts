@@ -5,5 +5,3 @@ export const pages = {
 } as const
 
 export const pagesList = Object.keys(pages)
-
-export type pages = typeof pages[keyof typeof pages]
