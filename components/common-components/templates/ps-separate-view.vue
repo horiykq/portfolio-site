@@ -1,7 +1,7 @@
 <template>
   <div class="ps-seperate-view">
     <div class="ps-seperate-view__sidenav">
-      <ps-side-navigation />
+      <ps-side-navigation :browsed-page="browsedPage" />
     </div>
     <div class="ps-seperate-view__contents"></div>
   </div>
@@ -10,8 +10,17 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
+import { page } from '~/types/page'
+
 export default Vue.extend({
   components: { PsSideNavigation },
+
+  props: {
+    browsedPage: {
+      type: Object as () => page,
+      required: true,
+    },
+  },
 })
 </script>
 

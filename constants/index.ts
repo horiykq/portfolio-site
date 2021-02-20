@@ -1,9 +1,9 @@
 export const pages = {
-  HOME: { path: '/', name: 'HOME', visible: true },
-  ABOUT_ME: { path: '/about', name: 'ABOUT ME', visible: true },
-  CAREER: { path: '/career', name: 'CAREER', visible: true },
-  DEVELOPMENT: { path: '/development', name: 'DEVELOPMENT', visible: true },
-  SKILLSET: { path: 'skillset', name: 'SKILLSET', visible: true },
+  HOME: { path: '/', name: 'home', visible: false },
+  ABOUT_ME: { path: '/about', name: 'about me', visible: true },
+  CAREER: { path: '/career', name: 'career', visible: true },
+  DEVELOPMENT: { path: '/development', name: 'development', visible: true },
+  TECHNOLOGY: { path: '/technology', name: 'technology', visible: true },
   NOT_FOUND: { path: '/404', name: null, visible: false },
 } as const
 

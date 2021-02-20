@@ -1,8 +1,18 @@
 <template>
-  <div>404 Not found.</div>
+  <ps-separate-view :browsed-page="page"></ps-separate-view>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({})
+import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
+import { pages } from '~/constants'
+export default Vue.extend({
+  components: { PsSeparateView },
+
+  data() {
+    return {
+      page: pages.NOT_FOUND,
+    }
+  },
+})
 </script>
