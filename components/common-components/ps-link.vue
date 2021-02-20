@@ -1,5 +1,7 @@
 <template>
-  <a is="nuxt-link" class="ps-link" :to="to"><slot /></a>
+  <a is="nuxt-link" class="ps-link" :to="to">
+    <slot />
+  </a>
 </template>
 
 <script lang="ts">
@@ -19,5 +21,6 @@ $block: '.ps-link';
 #{$block} {
   text-decoration: none;
   color: $color-default-black;
+  display: inline-block;
 }
 </style>

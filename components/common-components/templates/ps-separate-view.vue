@@ -9,9 +9,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import psSideNavigation from '../side-navigation/ps-side-navigation.vue'
+import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
 export default Vue.extend({
-  components: { psSideNavigation },
+  components: { PsSideNavigation },
 })
 </script>
 

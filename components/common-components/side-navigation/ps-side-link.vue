@@ -26,5 +26,6 @@ $block: '.ps-side-link';
 #{$block} {
   font-size: 18px;
   color: $color-default-black;
+  display: inline-block;
 }
 </style>

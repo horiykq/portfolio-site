@@ -14,9 +14,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import psLink from '../ps-link.vue'
+import PsLink from '../ps-link.vue'
 export default Vue.extend({
-  components: { psLink },
+  components: { PsLink },
 })
 </script>
 

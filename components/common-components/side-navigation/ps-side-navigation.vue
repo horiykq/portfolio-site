@@ -1,23 +1,25 @@
 <template>
-  <div class="ps-side-navigation">
-    <ps-site-title />
-    <div
-      v-for="(page, index) in pagesList"
-      :key="index"
-      class="ps-side-navigation__links"
-    >
-      <ps-side-link
-        v-if="pages[page].visible"
-        :to="pages[page].path"
-        :label="pages[page].name"
-      ></ps-side-link>
+  <div class="ps-side-navigation__outer">
+    <div class="ps-side-navigation__inner">
+      <ps-site-title />
+      <div
+        v-for="(page, index) in pagesList"
+        :key="index"
+        class="ps-side-navigation__links"
+      >
+        <ps-side-link
+          v-if="pages[page].visible"
+          :to="pages[page].path"
+          :label="pages[page].name"
+        ></ps-side-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import psSiteTitle from './ps-site-title.vue'
+import PsSiteTitle from './ps-site-title.vue'
 import PsSideLink from './ps-side-link.vue'
 import { pages, pagesList } from '~/constants/index'
 
@@ -27,7 +29,7 @@ type Data = {
 }
 
 export default Vue.extend({
-  components: { psSiteTitle, PsSideLink },
+  components: { PsSiteTitle, PsSideLink },
   data(): Data {
     return {
       pages,
@@ -40,11 +42,19 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-side-navigation';
 #{$block} {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  padding: 80px 0 0 48px;
+  &__outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 96px);
+    height: calc(100% - 160px);
+  }
   &__links {
     display: flex;
     flex-direction: column;
