@@ -3,7 +3,11 @@
     <div class="ps-seperate-view__sidenav">
       <ps-side-navigation :browsed-page="browsedPage" />
     </div>
-    <div class="ps-seperate-view__contents"></div>
+    <div class="ps-seperate-view__contentsOuter">
+      <div class="ps-seperate-view__contentsInner">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -34,13 +38,18 @@ $block: '.ps-seperate-view';
     display: inline-block;
     width: 320px;
     height: 100%;
-
-    /* border-right: 1px solid $color-border-black; */
   }
-  &__contents {
-    display: inline-block;
+  &__contentsOuter {
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
     width: calc(100% - 320px);
     height: 100%;
+  }
+  &__contentsInner {
+    width: 100%;
+    max-width: 700px;
+    padding: 128px 32px;
   }
 }
 </style>

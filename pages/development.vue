@@ -1,5 +1,5 @@
 <template>
-  <ps-separate-view :browsed-page="page"></ps-separate-view>
+  <ps-separate-view :browsed-page="page">DevelopmentPage</ps-separate-view>
 </template>
 
 <script lang="ts">

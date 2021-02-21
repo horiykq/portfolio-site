@@ -1,6 +1,12 @@
 <template>
-  <ps-link :to="to">
-    <p :class="browsed ? 'ps-side-link ps-side-link__browsed' : 'ps-side-link'">
+  <ps-link class="ps-side-link__outer" :to="to">
+    <p
+      :class="
+        browsed
+          ? 'ps-side-link__inner ps-side-link__browsedInner'
+          : 'ps-side-link__inner'
+      "
+    >
       {{ label }}
     </p>
   </ps-link>
@@ -30,19 +36,24 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-side-link';
 #{$block} {
-  font-size: 20px;
-  font-weight: 300;
-  color: $color-default-black;
-  display: inline-block;
-  margin: 6.4px 0;
-  padding-left: 12px;
-  text-transform: uppercase;
-  transition: 0.4s all;
-  border-left: 2px solid $color-white;
-  &:hover {
-    border-left: 2px solid $color-default-blue;
+  &__outer {
+    margin: 6.4px 0;
+    transition: 0.4s all;
+    border-left: 2px solid $color-white;
+    &:hover {
+      border-left: 2px solid $color-default-blue;
+    }
   }
-  &__browsed {
+  &__inner {
+    font-family: $en-font;
+    font-size: 20px;
+    font-weight: 300;
+    color: $color-default-black;
+    display: inline-block;
+    padding-left: 12px;
+    text-transform: uppercase;
+  }
+  &__browsedInner {
     color: $color-dark-blue;
   }
 }

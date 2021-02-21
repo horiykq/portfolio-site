@@ -15,7 +15,7 @@
           :to="pages[page].path"
           :label="pages[page].name"
           :browsed="pages[page] === browsedPage"
-        ></ps-side-link>
+        />
       </div>
     </div>
   </div>
