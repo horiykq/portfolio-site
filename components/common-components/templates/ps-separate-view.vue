@@ -31,20 +31,21 @@ export default Vue.extend({
 <style lang="scss" scoped SideNavigation>
 $block: '.ps-seperate-view';
 #{$block} {
-  display: flex;
+  display: inline-block;
   width: 100vw;
   height: 100vh;
   &__sidenav {
+    position: fixed;
+    top: calc(50vh - 324.13px / 2);
+    left: 0;
     display: inline-block;
     width: 320px;
-    height: 100%;
   }
   &__contentsOuter {
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
-    width: calc(100% - 320px);
-    height: 100%;
+    width: 100%;
+    padding-left: 320px;
   }
   &__contentsInner {
     width: 100%;
