@@ -1,13 +1,9 @@
 <template>
-  <div class="ps-site-title">
+  <div
+    :class="browsed ? 'ps-site-title ps-site-title__browsed' : 'ps-site-title'"
+  >
     <ps-link :to="to">
-      <div
-        :class="
-          browsed
-            ? 'ps-site-title__inner ps-site-title__browsedInner'
-            : 'ps-site-title__inner'
-        "
-      >
+      <div class="ps-site-title__inner">
         Portfolio
         <br />
         of
@@ -46,8 +42,7 @@ $block: '.ps-site-title';
 #{$block} {
   padding-left: 12px;
   border-left: 2px solid $color-white;
-  transition: 0.4s all;
-  &:hover {
+  &__browsed {
     border-left: 2px solid $color-default-blue;
   }
   &__inner {
@@ -55,9 +50,10 @@ $block: '.ps-site-title';
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
-  }
-  &__browsedInner {
-    color: $color-dark-blue;
+    transition: 0.4s all;
+    &:hover {
+      color: $color-dark-blue;
+    }
   }
 }
 </style>

@@ -1,12 +1,13 @@
 <template>
-  <ps-link class="ps-side-link__outer" :to="to">
-    <p
-      :class="
-        browsed
-          ? 'ps-side-link__inner ps-side-link__browsedInner'
-          : 'ps-side-link__inner'
-      "
-    >
+  <ps-link
+    :class="
+      browsed
+        ? 'ps-side-link__outer ps-side-link__browsedOuter'
+        : 'ps-side-link__outer'
+    "
+    :to="to"
+  >
+    <p class="ps-side-link__inner">
       {{ label }}
     </p>
   </ps-link>
@@ -40,21 +41,21 @@ $block: '.ps-side-link';
     margin: 6.4px 0;
     transition: 0.4s all;
     border-left: 2px solid $color-white;
+    color: $color-default-black;
     &:hover {
-      border-left: 2px solid $color-default-blue;
+      color: $color-dark-blue;
     }
+  }
+  &__browsedOuter {
+    border-left: 2px solid $color-default-blue;
   }
   &__inner {
     font-family: $en-font;
     font-size: 20px;
     font-weight: 300;
-    color: $color-default-black;
     display: inline-block;
     padding-left: 12px;
     text-transform: uppercase;
-  }
-  &__browsedInner {
-    color: $color-dark-blue;
   }
 }
 </style>
