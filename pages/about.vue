@@ -1,13 +1,16 @@
 <template>
-  <ps-separate-view :browsed-page="page"> AboutPage </ps-separate-view>
+  <ps-separate-view :browsed-page="page">
+    <ps-about-profile />
+  </ps-separate-view>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import PsAboutProfile from '~/components/about-components/sections/ps-about-profile.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import { pages } from '~/constants'
 export default Vue.extend({
-  components: { PsSeparateView },
+  components: { PsSeparateView, PsAboutProfile },
 
   data() {
     return {
