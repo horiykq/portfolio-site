@@ -1,7 +1,7 @@
 <template>
   <h1 class="ps-first-heading">
-    <slot />
     <div class="ps-first-heading__decoration" />
+    <slot />
     <span class="ps-first-heading__jpHeading">
       {{ jpHeading }}
     </span>
@@ -29,13 +29,15 @@ $block: '.ps-first-heading';
   &__decoration {
     display: inline-block;
     width: 32px;
-    height: 1px;
-    background: $color-default-black;
-    margin: 0 2px 6px 32px;
+    height: 2px;
+    background: $color-default-blue;
+    margin: 0 16px 8px 0;
   }
   &__jpHeading {
     font-family: $jp-font;
     font-size: 20px;
+    font-weight: 300;
+    margin-left: 12px;
   }
 }
 </style>
