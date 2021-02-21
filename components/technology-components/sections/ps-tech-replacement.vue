@@ -1,6 +1,8 @@
 <template>
   <ps-section>
-    <ps-first-heading jp-heading="言語">Languages</ps-first-heading>
+    <ps-first-heading jp-heading="ハードウェアの換装">
+      Replacement
+    </ps-first-heading>
   </ps-section>
 </template>
 

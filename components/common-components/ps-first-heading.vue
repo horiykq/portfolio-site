@@ -26,6 +26,7 @@ $block: '.ps-first-heading';
   font-size: 24px;
   font-weight: 400;
   font-family: $en-font;
+  margin: 24px 0;
   &__decoration {
     display: inline-block;
     width: 32px;
