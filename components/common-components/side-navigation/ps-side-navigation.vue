@@ -26,7 +26,7 @@ import Vue from 'vue'
 import PsSiteTitle from './ps-site-title.vue'
 import PsSideLink from './ps-side-link.vue'
 import { pages, pagesList } from '~/constants/index'
-import { page } from '~/types/page'
+import { page } from '~/types/index'
 
 export default Vue.extend({
   components: { PsSiteTitle, PsSideLink },

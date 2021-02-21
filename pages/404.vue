@@ -1,13 +1,18 @@
 <template>
-  <ps-separate-view :browsed-page="page"></ps-separate-view>
+  <ps-separate-view :browsed-page="page">
+    <ps-first-heading jp-heading="ページが見つかりません">
+      404 Not found.
+    </ps-first-heading>
+  </ps-separate-view>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import { pages } from '~/constants'
 export default Vue.extend({
-  components: { PsSeparateView },
+  components: { PsSeparateView, PsFirstHeading },
 
   data() {
     return {
