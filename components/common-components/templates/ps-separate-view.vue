@@ -33,7 +33,6 @@ $block: '.ps-seperate-view';
 #{$block} {
   display: inline-block;
   width: 100vw;
-  height: 100vh;
   &__sidenav {
     position: fixed;
     top: calc(50vh - 324.13px / 2);
