@@ -1,5 +1,5 @@
 <template>
-  <img class="ps-image" :src="imgSrc" decoding="async" />
+  <img class="ps-image" :src="imgSrc" :alt="imgAlt" decoding="async" />
 </template>
 
 <script lang="ts">
@@ -8,16 +8,27 @@ export default Vue.extend({
   props: {
     src: {
       type: String,
-      default: undefined,
+      default: '',
+    },
+    alt: {
+      type: String,
+      default: '',
     },
   },
 
   computed: {
     imgSrc(): string {
-      if (this.src !== undefined) {
+      if (this.src !== '') {
         return this.src
       }
       return ''
+    },
+
+    imgAlt(): string {
+      if (this.alt !== '') {
+        return this.alt
+      }
+      return '写真'
     },
   },
 })

@@ -1,7 +1,7 @@
 <template>
   <ps-section>
     <ps-first-heading jp-heading="プロフィール">Profile</ps-first-heading>
-    <ps-image src="/images/childhood.jpg" />
+    <ps-image src="/images/childhood.jpg" alt="horiの子供時代" />
   </ps-section>
 </template>
 
