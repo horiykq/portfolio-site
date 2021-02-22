@@ -1,6 +1,6 @@
 <template>
   <ps-normal-link :href="sns.path">
-    <img class="ps-sns-link" :src="iconSrc" />
+    <img class="ps-sns-link" :src="iconSrc" :alt="sns.name" />
   </ps-normal-link>
 </template>
 

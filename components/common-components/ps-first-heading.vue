@@ -2,6 +2,7 @@
   <h1 class="ps-first-heading">
     <div class="ps-first-heading__decoration" />
     <slot />
+    <br class="ps-first-heading__spBreak" />
     <span class="ps-first-heading__jpHeading">
       {{ jpHeading }}
     </span>
@@ -35,11 +36,22 @@ $block: '.ps-first-heading';
     background: $color-default-blue;
     margin: 0 16px 8px 0;
   }
+  &__spBreak {
+    @include mq_pc {
+      display: none;
+    }
+    @include mq_tablet {
+      display: none;
+    }
+  }
   &__jpHeading {
     font-family: $jp-font;
     font-weight: 300;
     margin-left: 12px;
     @include font-size(2);
+    @include mq_sp {
+      margin-left: 54px;
+    }
   }
 }
 </style>
