@@ -15,7 +15,7 @@ import PsDevLineBot from '~/components/development-components/sections/ps-dev-li
 import PsDevStaticSites from '~/components/development-components/sections/ps-dev-static-sites.vue'
 import PsDevSynq from '~/components/development-components/sections/ps-dev-synq.vue'
 
-import { pages } from '~/constants'
+import { pages } from '~/constants/pages'
 export default Vue.extend({
   components: {
     PsSeparateView,

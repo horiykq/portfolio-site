@@ -17,7 +17,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsLink from '../ps-link.vue'
-import { pages } from '~/constants'
+import { pages } from '~/constants/pages'
 
 export default Vue.extend({
   components: { PsLink },
