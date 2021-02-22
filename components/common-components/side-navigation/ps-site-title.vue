@@ -47,10 +47,11 @@ $block: '.ps-site-title';
   }
   &__inner {
     font-family: $en-font;
-    font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
     transition: 0.4s all;
+    @include font-size(2.4);
+
     &:hover {
       color: $color-dark-blue;
     }

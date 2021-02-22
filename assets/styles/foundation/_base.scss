@@ -5,22 +5,14 @@
 body {
   font-family: 'Noto Sans JP', sans-serif;
   background: #fff;
+  color: #121212;
+  @include font-size(1.6);
+
+  @include mq_sp {
+    @include font-size(1.4);
+  }
 }
 
 p {
   font-weight: 300;
-}
-
-@media screen and (max-width: 979px) {
-  body {
-    font-size: 14px;
-    color: #121212;
-  }
-}
-
-@media screen and (min-width: 980px) {
-  body {
-    font-size: 16px;
-    color: #121212;
-  }
 }

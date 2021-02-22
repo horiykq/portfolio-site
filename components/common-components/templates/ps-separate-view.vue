@@ -58,6 +58,9 @@ $block: '.ps-seperate-view';
     width: 100%;
     max-width: 700px;
     padding: 128px 32px;
+    @include mq_sp {
+      padding: 32px;
+    }
   }
 }
 </style>

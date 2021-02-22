@@ -74,23 +74,39 @@ $block: '.ps-about-profile';
     margin-bottom: 32px;
   }
   &__basicInfo {
+    @include mq_sp {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__name {
     display: inline-block;
-    font-size: 28px;
     font-weight: 300;
+    @include font-size(2.8);
+
+    @include mq_sp {
+      @include font-size(2.4);
+    }
   }
   &__enName {
     font-family: $en-font;
-    font-size: 24px;
     margin-left: 8px;
+    @include font-size(2.4);
+
+    @include mq_sp {
+      @include font-size(2.2);
+    }
   }
   &__snsLinks {
     display: flex;
     margin-top: 4px;
+    @include mq_sp {
+      margin: 16px 0 8px 0;
+    }
   }
   &__snsLink {
     width: 28px;
@@ -99,6 +115,10 @@ $block: '.ps-about-profile';
   }
   &__listWrapper {
     padding-left: 36px;
+    @include mq_sp {
+      padding-left: 16px;
+    }
+
     margin: 32px 0;
   }
   &__list {
@@ -107,6 +127,9 @@ $block: '.ps-about-profile';
   &__listKey {
     font-weight: 500;
     margin-bottom: 8px;
+    @include mq_sp {
+      @include font-size(1.6);
+    }
   }
   &__listValue {
     font-weight: 400;

@@ -23,7 +23,8 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-first-heading';
 #{$block} {
-  font-size: 24px;
+  @include font-size(2.4);
+
   font-weight: 400;
   font-family: $en-font;
   margin: 24px 0;
@@ -36,9 +37,9 @@ $block: '.ps-first-heading';
   }
   &__jpHeading {
     font-family: $jp-font;
-    font-size: 20px;
     font-weight: 300;
     margin-left: 12px;
+    @include font-size(2);
   }
 }
 </style>

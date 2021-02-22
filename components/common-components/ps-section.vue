@@ -14,5 +14,6 @@ $block: '.ps-section';
 #{$block} {
   display: inline-block;
   width: 100%;
+  padding: 16px 0;
 }
 </style>

@@ -62,6 +62,9 @@ $block: '.ps-side-navigation';
     display: flex;
     flex-direction: column;
     width: calc(100% - 96px);
+    @include mq_sp {
+      width: 100%;
+    }
   }
   &__title {
     margin-bottom: 48px;

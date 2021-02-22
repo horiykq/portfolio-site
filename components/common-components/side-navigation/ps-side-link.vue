@@ -51,11 +51,11 @@ $block: '.ps-side-link';
   }
   &__inner {
     font-family: $en-font;
-    font-size: 20px;
     font-weight: 300;
     display: inline-block;
     padding-left: 12px;
     text-transform: uppercase;
+    @include font-size(2);
   }
 }
 </style>
