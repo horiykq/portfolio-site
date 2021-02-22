@@ -28,7 +28,7 @@ export default Vue.extend({
         case twitter:
           return require('@/assets/icons/twitter-icon.svg')
         case note:
-          return require('@/assets/icons/note-icon.svg')
+          return require('@/assets/icons/note-icon.png')
         case wantedly:
           return require('@/assets/icons/wantedly-icon.svg')
         case gitHub:
