@@ -4,7 +4,7 @@ const twitter: sns = {
   path: 'https://twitter.com/horri1520',
   id: 'horri1520',
   name: 'Twitter',
-  iconPath: '',
+  iconPath: '~/assets/icons/twitter-icon.svg',
 }
 
 export default twitter

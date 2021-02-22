@@ -6,23 +6,64 @@
       src="/images/childhood.jpg"
       alt="horiの子供時代"
     />
-    <h2 class="ps-about-profile__name">
-      堀内 凱登
-      <span class="ps-about-profile__enName">/ Kaito Horiuchi</span>
-    </h2>
-    <!-- <ul>
-      <li>hoge</li>
-    </ul> -->
+    <div class="ps-about-profile__basicInfo">
+      <h2 class="ps-about-profile__name">
+        堀内 凱登
+        <span class="ps-about-profile__enName">/ Kaito Horiuchi (hori)</span>
+      </h2>
+      <div class="ps-about-profile__snsLinks">
+        <ps-sns-link
+          v-for="(sns, index) in snss"
+          :key="index"
+          class="ps-about-profile__snsLink"
+          :sns="sns"
+        />
+      </div>
+    </div>
+    <ul class="ps-about-profile__listWrapper">
+      <li class="ps-about-profile__list">
+        <p class="ps-about-profile__listKey">出身地</p>
+        <p class="ps-about-profile__listValue">香川県</p>
+      </li>
+      <li class="ps-about-profile__list">
+        <p class="ps-about-profile__listKey">居住地</p>
+        <p class="ps-about-profile__listValue">福岡県</p>
+      </li>
+      <li class="ps-about-profile__list">
+        <p class="ps-about-profile__listKey">年齢</p>
+        <p class="ps-about-profile__listValue">21歳（2000年生まれ）</p>
+      </li>
+      <li class="ps-about-profile__list">
+        <p class="ps-about-profile__listKey">学年</p>
+        <p class="ps-about-profile__listValue">大学2年生（23卒）</p>
+      </li>
+      <li class="ps-about-profile__list">
+        <p class="ps-about-profile__listKey">趣味</p>
+        <p class="ps-about-profile__listValue">
+          ガジェット系（パソコンの換装・OS入れ替えなど）
+          <br />
+          音楽（カラオケ・ピアノ・ギターなど）
+        </p>
+      </li>
+    </ul>
   </ps-section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import psFirstHeading from '~/components/common-components/ps-first-heading.vue'
+import PsSnsLink from '../ps-sns-link.vue'
+import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsImage from '~/components/common-components/ps-image.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
+import snss from '~/constants/sns'
 export default Vue.extend({
-  components: { psFirstHeading, PsSection, PsImage },
+  components: { PsFirstHeading, PsSection, PsImage, PsSnsLink },
+
+  data() {
+    return {
+      snss,
+    }
+  },
 })
 </script>
 
@@ -32,7 +73,13 @@ $block: '.ps-about-profile';
   &__childhoodImage {
     margin-bottom: 32px;
   }
+  &__basicInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__name {
+    display: inline-block;
     font-size: 28px;
     font-weight: 300;
   }
@@ -40,6 +87,29 @@ $block: '.ps-about-profile';
     font-family: $en-font;
     font-size: 24px;
     margin-left: 8px;
+  }
+  &__snsLinks {
+    display: flex;
+    margin-top: 4px;
+  }
+  &__snsLink {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+  }
+  &__listWrapper {
+    padding-left: 36px;
+    margin: 32px 0;
+  }
+  &__list {
+    margin: 16px 0;
+  }
+  &__listKey {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &__listValue {
+    font-weight: 400;
   }
 }
 </style>

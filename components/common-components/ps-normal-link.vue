@@ -1,5 +1,10 @@
 <template>
-  <a class="ps-normal-link" :href="href">
+  <a
+    class="ps-normal-link"
+    :href="href"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <slot />
   </a>
 </template>
