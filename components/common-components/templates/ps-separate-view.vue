@@ -44,10 +44,7 @@ $block: '.ps-seperate-view';
     display: flex;
     justify-content: center;
     width: 100%;
-
-    /* @include mq_pc {
-      padding-left: 320px;
-    } */
+    padding-left: 320px;
   }
   &__contentsInner {
     width: 100%;
