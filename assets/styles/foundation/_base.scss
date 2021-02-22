@@ -7,10 +7,6 @@ body {
   background: #fff;
   color: #121212;
   @include font-size(1.6);
-
-  @include mq_sp {
-    @include font-size(1.4);
-  }
 }
 
 p {

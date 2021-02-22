@@ -128,7 +128,7 @@ $block: '.ps-about-profile';
     font-weight: 500;
     margin-bottom: 8px;
     @include mq_sp {
-      @include font-size(1.6);
+      @include font-size(1.8);
     }
   }
   &__listValue {

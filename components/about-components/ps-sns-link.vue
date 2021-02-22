@@ -48,5 +48,9 @@ $block: '.ps-sns-link';
 #{$block} {
   width: 100%;
   height: 100%;
+  transition: 0.4s all;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 </style>
