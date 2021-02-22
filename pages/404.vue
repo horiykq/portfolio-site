@@ -10,13 +10,13 @@
 import Vue from 'vue'
 import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
-import { pages } from '~/constants/pages'
+import notFoundPage from '~/constants/pages/not-found-page'
 export default Vue.extend({
   components: { PsSeparateView, PsFirstHeading },
 
   data() {
     return {
-      page: pages.NOT_FOUND,
+      page: notFoundPage,
     }
   },
 })

@@ -17,7 +17,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsLink from '../ps-link.vue'
-import { pages } from '~/constants/pages'
+import indexPage from '~/constants/pages/index-page'
 
 export default Vue.extend({
   components: { PsLink },
@@ -31,7 +31,7 @@ export default Vue.extend({
 
   data() {
     return {
-      to: pages.HOME.path,
+      to: indexPage.path,
     }
   },
 })

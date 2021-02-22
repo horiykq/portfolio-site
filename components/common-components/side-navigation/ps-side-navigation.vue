@@ -3,18 +3,18 @@
     <div class="ps-side-navigation__inner">
       <ps-site-title
         class="ps-side-navigation__title"
-        :browsed="pages.HOME === browsedPage"
+        :browsed="browsedPage === indexPage"
       />
       <div
-        v-for="(page, index) in pagesList"
+        v-for="(page, index) in pages"
         :key="index"
         class="ps-side-navigation__links"
       >
         <ps-side-link
-          v-if="pages[page].visible"
-          :to="pages[page].path"
-          :label="pages[page].name"
-          :browsed="pages[page] === browsedPage"
+          v-if="page.visible"
+          :to="page.path"
+          :label="page.name"
+          :browsed="browsedPage === page"
         />
       </div>
     </div>
@@ -25,8 +25,9 @@
 import Vue from 'vue'
 import PsSiteTitle from './ps-site-title.vue'
 import PsSideLink from './ps-side-link.vue'
-import { pages, pagesList } from '~/constants/pages'
-import { page } from '~/types/page'
+import page from '~/types/page'
+import pages from '~/constants/pages/index'
+import indexPage from '~/constants/pages/index-page'
 
 export default Vue.extend({
   components: { PsSiteTitle, PsSideLink },
@@ -41,7 +42,7 @@ export default Vue.extend({
   data() {
     return {
       pages,
-      pagesList,
+      indexPage,
     }
   },
 })

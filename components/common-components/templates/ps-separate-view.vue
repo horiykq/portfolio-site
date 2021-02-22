@@ -14,7 +14,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
-import { page } from '~/types/page'
+import page from '~/types/page'
 
 export default Vue.extend({
   components: { PsSideNavigation },

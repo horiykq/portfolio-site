@@ -14,8 +14,8 @@ import PsDevFa from '~/components/development-components/sections/ps-dev-fa.vue'
 import PsDevLineBot from '~/components/development-components/sections/ps-dev-line-bot.vue'
 import PsDevStaticSites from '~/components/development-components/sections/ps-dev-static-sites.vue'
 import PsDevSynq from '~/components/development-components/sections/ps-dev-synq.vue'
+import developmentPage from '~/constants/pages/development-page'
 
-import { pages } from '~/constants/pages'
 export default Vue.extend({
   components: {
     PsSeparateView,
@@ -27,7 +27,7 @@ export default Vue.extend({
 
   data() {
     return {
-      page: pages.DEVELOPMENT,
+      page: developmentPage,
     }
   },
 })

@@ -1,5 +1,5 @@
 <template>
-  <a is="nuxt-link" class="ps-link" :to="to">
+  <a class="ps-normal-link" :href="href">
     <slot />
   </a>
 </template>
@@ -8,7 +8,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   props: {
-    to: {
+    href: {
       type: String,
       required: true,
     },
@@ -17,7 +17,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$block: '.ps-link';
+$block: '.ps-normal-link';
 #{$block} {
   text-decoration: none;
   color: $color-default-black;

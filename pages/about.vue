@@ -8,13 +8,13 @@
 import Vue from 'vue'
 import PsAboutProfile from '~/components/about-components/sections/ps-about-profile.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
-import { pages } from '~/constants/pages'
+import aboutPage from '~/constants/pages/about-page'
 export default Vue.extend({
   components: { PsSeparateView, PsAboutProfile },
 
   data() {
     return {
-      page: pages.ABOUT_ME,
+      page: aboutPage,
     }
   },
 })
