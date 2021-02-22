@@ -39,15 +39,20 @@ $block: '.ps-seperate-view';
     left: 0;
     display: inline-block;
     width: 320px;
+    @include mq_tablet {
+      display: none;
+    }
+    @include mq_sp {
+      display: none;
+    }
   }
   &__contentsOuter {
     display: flex;
     justify-content: center;
     width: 100%;
-
-    /* @include mq_pc {
+    @include mq_pc {
       padding-left: 320px;
-    } */
+    }
   }
   &__contentsInner {
     width: 100%;

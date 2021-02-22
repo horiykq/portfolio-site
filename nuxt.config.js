@@ -39,7 +39,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: [
+      '~assets/styles/foundation/_mixin.scss',
+      '~assets/styles/foundation/_variabe.scss',
+    ],
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
