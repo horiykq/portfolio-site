@@ -95,7 +95,7 @@ $block: '.ps-about-profile';
   &__snsLink {
     width: 28px;
     height: 28px;
-    margin-right: 12px;
+    margin: 0 8px;
   }
   &__listWrapper {
     padding-left: 36px;
