@@ -3,8 +3,8 @@
     <div class="ps-seperate-view__sidenav">
       <ps-side-navigation :browsed-page="browsedPage" />
     </div>
-    <div class="ps-seperate-view__spHeader">
-      <ps-sp-menu :browsed-page="browsedPage" />
+    <div v-if="browsedPage !== indexPage" class="ps-seperate-view__spHeader">
+      <ps-sp-header />
     </div>
     <div class="ps-seperate-view__contentsOuter">
       <div class="ps-seperate-view__contentsInner">
@@ -17,17 +17,24 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
-import PsSpMenu from '../ps-sp-menu.vue'
+import PsSpHeader from '../ps-sp-header.vue'
 import page from '~/types/page'
+import indexPage from '~/constants/pages/index-page'
 
 export default Vue.extend({
-  components: { PsSideNavigation, PsSpMenu },
+  components: { PsSideNavigation, PsSpHeader },
 
   props: {
     browsedPage: {
       type: Object as () => page,
       required: true,
     },
+  },
+
+  data() {
+    return {
+      indexPage,
+    }
   },
 })
 </script>
@@ -72,7 +79,7 @@ $block: '.ps-seperate-view';
     max-width: 700px;
     padding: 128px 32px;
     @include mq_sp {
-      padding: 32px;
+      padding: 128px 32px 32px 32px;
     }
   }
 }
