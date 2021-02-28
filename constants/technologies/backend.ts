@@ -5,7 +5,7 @@ const backend: technology[] = [
   { name: 'golang', label: 'Go' },
   { name: 'django', label: 'Django' },
   { name: 'Flask', label: 'flask' },
-  { name: 'rails', label: 'Ruby on Rails' },
+  { name: 'rails', label: 'Rails' },
   { name: 'echo', label: 'Echo' },
 ]
 

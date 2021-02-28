@@ -8,8 +8,8 @@ const frontend: technology[] = [
   { name: 'react', label: 'React.js' },
   { name: 'vue', label: 'Vue.js' },
   { name: 'gatsby', label: 'Gatsby.js' },
-  { name: 'nuxt', label: 'Nuxt.js' },
   { name: 'next', label: 'Next.js' },
+  { name: 'nuxt', label: 'Nuxt.js' },
 ]
 
 export default frontend

@@ -1,7 +1,7 @@
 <template>
   <div class="ps-recommend-link">
     <ps-link :to="to" class="ps-recommend-link__link">
-      <p class="ps-recommend-link__recommend">Next Page >></p>
+      <p class="ps-recommend-link__recommend">{{ mainLabel }} Page >></p>
       <slot />
     </ps-link>
   </div>
@@ -17,6 +17,16 @@ export default Vue.extend({
     to: {
       type: String,
       required: true,
+    },
+    previous: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  computed: {
+    mainLabel(): string {
+      return this.previous ? 'Previous' : 'Next'
     },
   },
 })

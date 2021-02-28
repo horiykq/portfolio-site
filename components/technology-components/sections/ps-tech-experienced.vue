@@ -14,6 +14,61 @@
         :technology="element"
       />
     </div>
+
+    <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
+      Backend
+    </ps-second-heading>
+    <div class="ps-tech-experienced__elements">
+      <ps-tech-icon
+        v-for="(element, index) in backend"
+        :key="index"
+        :technology="element"
+      />
+    </div>
+
+    <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
+      Other Languages
+    </ps-second-heading>
+    <div class="ps-tech-experienced__elements">
+      <ps-tech-icon
+        v-for="(element, index) in others"
+        :key="index"
+        :technology="element"
+      />
+    </div>
+
+    <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
+      Hardware
+    </ps-second-heading>
+    <div class="ps-tech-experienced__elements">
+      <ps-tech-icon
+        v-for="(element, index) in hardware"
+        :key="index"
+        :technology="element"
+      />
+    </div>
+
+    <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
+      Machine Learning
+    </ps-second-heading>
+    <div class="ps-tech-experienced__elements">
+      <ps-tech-icon
+        v-for="(element, index) in machineLearning"
+        :key="index"
+        :technology="element"
+      />
+    </div>
+
+    <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
+      Infrastructure
+    </ps-second-heading>
+    <div class="ps-tech-experienced__elements">
+      <ps-tech-icon
+        v-for="(element, index) in infrastructure"
+        :key="index"
+        :technology="element"
+      />
+    </div>
   </ps-section>
 </template>
 
