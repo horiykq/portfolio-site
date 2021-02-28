@@ -29,7 +29,7 @@ $block: '.ps-index-page';
     display: none;
     @include mq_sp {
       display: inline-block;
-      padding: 128px 0 0 0;
+      padding: calc(50vh - 459.2px / 2 - 128px) 0 0 0;
     }
   }
 }
