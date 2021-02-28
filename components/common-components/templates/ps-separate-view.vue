@@ -3,6 +3,9 @@
     <div class="ps-seperate-view__sidenav">
       <ps-side-navigation :browsed-page="browsedPage" />
     </div>
+    <div class="ps-seperate-view__spHeader">
+      <ps-sp-menu :browsed-page="browsedPage" />
+    </div>
     <div class="ps-seperate-view__contentsOuter">
       <div class="ps-seperate-view__contentsInner">
         <slot />
@@ -14,10 +17,11 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
+import PsSpMenu from '../ps-sp-menu.vue'
 import page from '~/types/page'
 
 export default Vue.extend({
-  components: { PsSideNavigation },
+  components: { PsSideNavigation, PsSpMenu },
 
   props: {
     browsedPage: {
@@ -43,6 +47,15 @@ $block: '.ps-seperate-view';
       display: none;
     }
     @include mq_sp {
+      display: none;
+    }
+  }
+  &__spHeader {
+    width: 100%;
+    @include mq_pc {
+      display: none;
+    }
+    @include mq_tablet {
       display: none;
     }
   }
