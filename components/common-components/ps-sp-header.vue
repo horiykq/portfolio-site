@@ -30,7 +30,7 @@ $block: '.ps-sp-header';
   width: 100vw;
   padding: 16px 32px;
   background: $color-white;
-  border-bottom: 1px solid $color-default-black;
+  border-bottom: 1px solid $color-border-black;
   &__outer {
     display: inline-block;
   }
@@ -39,7 +39,7 @@ $block: '.ps-sp-header';
     text-transform: uppercase;
     font-family: $en-font;
     font-weight: 400;
-    color: $color-default-blue;
+    color: $color-default-black;
     @include font-size(2);
   }
 }
