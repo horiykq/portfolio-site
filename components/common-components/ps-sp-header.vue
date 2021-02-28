@@ -30,7 +30,7 @@ $block: '.ps-sp-header';
   width: 100vw;
   padding: 16px 32px;
   background: $color-white;
-  border-bottom: 1px solid $color-border-black;
+  border-bottom: 1px solid $color-border-gray;
   &__outer {
     display: inline-block;
   }
