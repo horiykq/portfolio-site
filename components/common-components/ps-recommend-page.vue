@@ -1,7 +1,10 @@
 <template>
-  <div class="ps-recommend-link">
-    <ps-link :to="to" class="ps-recommend-link__link">
-      <p class="ps-recommend-link__recommend">{{ mainLabel }} Page >></p>
+  <div class="ps-recommend-page">
+    <ps-link :to="to" class="ps-recommend-page__link">
+      <p class="ps-recommend-page__recommend">
+        {{ mainLabel }}
+        {{ type === 'next' || type === 'previous' ? 'Page' : '' }} >>
+      </p>
       <slot />
     </ps-link>
   </div>
@@ -18,22 +21,29 @@ export default Vue.extend({
       type: String,
       required: true,
     },
-    previous: {
-      type: Boolean,
-      default: false,
+    type: {
+      type: String,
+      default: 'next',
     },
   },
 
   computed: {
     mainLabel(): string {
-      return this.previous ? 'Previous' : 'Next'
+      switch (this.type) {
+        case 'next':
+          return 'Next'
+        case 'previous':
+          return 'previous'
+        default:
+          return this.type
+      }
     },
   },
 })
 </script>
 
 <style lang="scss" scoped>
-$block: '.ps-recommend-link';
+$block: '.ps-recommend-page';
 #{$block} {
   display: flex;
   justify-content: flex-end;
@@ -50,7 +60,7 @@ $block: '.ps-recommend-link';
     font-weight: 400;
     text-align: end;
     margin: 4px 0;
-    text-transform: none;
+    text-transform: capitalize;
 
     @include font-size(1.8);
   }

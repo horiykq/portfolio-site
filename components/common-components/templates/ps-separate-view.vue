@@ -20,6 +20,7 @@ import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
 import PsSpHeader from '../ps-sp-header.vue'
 import page from '~/types/page'
 import indexPage from '~/constants/pages/index-page'
+import domain from '~/constants/domain'
 
 export default Vue.extend({
   components: { PsSideNavigation, PsSpHeader },
@@ -35,6 +36,29 @@ export default Vue.extend({
     return {
       indexPage,
     }
+  },
+
+  head() {
+    return {
+      title: this.browsedPage.meta.title,
+      titleTemplate: '%s｜Portfolio of Kaito Horiuchi',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '堀内 凱登 / Kaito Horiuchi (hori) のポートフォリオサイトです。趣味のパソコンを仕事にすることを目指しています。',
+        },
+      ],
+    }
+  },
+
+  computed: {
+    metaURL(): string {
+      return domain + this.browsedPage.path
+    },
   },
 })
 </script>

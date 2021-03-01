@@ -98,9 +98,6 @@
     <ps-paragraph>
       写真は福岡市内のITベンチャーでインターンしていた頃の仕事風景。Web開発だけでなくハードウェアや機械学習も並行していた。
     </ps-paragraph>
-    <ps-next-page class="ps-about-history__recommend" :to="nextPage.path">
-      {{ nextPage.name }}
-    </ps-next-page>
   </ps-section>
 </template>
 
@@ -108,11 +105,9 @@
 import Vue from 'vue'
 import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsImage from '~/components/common-components/ps-image.vue'
-import PsNextPage from '~/components/common-components/ps-next-page.vue'
 import PsParagraph from '~/components/common-components/ps-paragraph.vue'
 import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
-import careerPage from '~/constants/pages/career-page'
 export default Vue.extend({
   components: {
     PsSection,
@@ -120,13 +115,6 @@ export default Vue.extend({
     PsSecondHeading,
     PsImage,
     PsParagraph,
-    PsNextPage,
-  },
-
-  data() {
-    return {
-      nextPage: careerPage,
-    }
   },
 })
 </script>
@@ -139,9 +127,6 @@ $block: '.ps-about-history';
   }
   &__picture {
     margin: 16px 0;
-  }
-  &__recommend {
-    margin-top: 32px;
   }
 }
 </style>
