@@ -1,5 +1,6 @@
 <template>
   <ps-separate-view :browsed-page="page">
+    <ps-page-header>{{ page.name }}</ps-page-header>
     <ps-about-profile />
     <ps-about-history />
   </ps-separate-view>
@@ -9,10 +10,11 @@
 import Vue from 'vue'
 import PsAboutHistory from '~/components/about-components/sections/ps-about-history.vue'
 import PsAboutProfile from '~/components/about-components/sections/ps-about-profile.vue'
+import PsPageHeader from '~/components/common-components/ps-page-header.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import aboutPage from '~/constants/pages/about-page'
 export default Vue.extend({
-  components: { PsSeparateView, PsAboutProfile, PsAboutHistory },
+  components: { PsSeparateView, PsPageHeader, PsAboutProfile, PsAboutHistory },
 
   data() {
     return {

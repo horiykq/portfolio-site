@@ -1,5 +1,6 @@
 <template>
   <ps-separate-view :browsed-page="page">
+    <ps-page-header>{{ page.name }}</ps-page-header>
     <ps-dev-fa />
     <ps-dev-line-bot />
     <ps-dev-synq />
@@ -9,6 +10,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import PsPageHeader from '~/components/common-components/ps-page-header.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import PsDevFa from '~/components/development-components/sections/ps-dev-fa.vue'
 import PsDevLineBot from '~/components/development-components/sections/ps-dev-line-bot.vue'
@@ -23,6 +25,7 @@ export default Vue.extend({
     PsDevLineBot,
     PsDevSynq,
     PsDevStaticSites,
+    PsPageHeader,
   },
 
   data() {

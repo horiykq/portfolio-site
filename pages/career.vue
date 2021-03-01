@@ -1,5 +1,6 @@
 <template>
   <ps-separate-view :browsed-page="page">
+    <ps-page-header>{{ page.name }}</ps-page-header>
     <ps-career-qu />
     <ps-career-quando />
     <ps-career-regnio />
@@ -13,6 +14,7 @@ import PsCareerNote from '~/components/career-components/sections/ps-career-note
 import PsCareerQu from '~/components/career-components/sections/ps-career-qu.vue'
 import PsCareerQuando from '~/components/career-components/sections/ps-career-quando.vue'
 import PsCareerRegnio from '~/components/career-components/sections/ps-career-regnio.vue'
+import PsPageHeader from '~/components/common-components/ps-page-header.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import careerPage from '~/constants/pages/career-page'
 export default Vue.extend({
@@ -22,6 +24,7 @@ export default Vue.extend({
     PsCareerRegnio,
     PsCareerNote,
     PsCareerQu,
+    PsPageHeader,
   },
 
   data() {

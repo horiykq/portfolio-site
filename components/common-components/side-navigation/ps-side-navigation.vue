@@ -1,6 +1,6 @@
 <template>
-  <div class="ps-side-navigation__outer">
-    <div class="ps-side-navigation__inner">
+  <header class="ps-side-navigation__outer">
+    <nav class="ps-side-navigation__inner">
       <ps-site-title
         class="ps-side-navigation__title"
         :browsed="browsedPage === indexPage"
@@ -17,8 +17,8 @@
           :browsed="browsedPage === page"
         />
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
 </template>
 
 <script lang="ts">
