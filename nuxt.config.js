@@ -50,6 +50,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics',
   ],
 
   styleResources: {
@@ -96,5 +97,9 @@ export default {
         component: resolve(__dirname, 'pages/404.vue'),
       })
     },
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
   },
 }
