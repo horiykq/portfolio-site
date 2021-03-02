@@ -20,7 +20,7 @@ import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
 import PsSpHeader from '../ps-sp-header.vue'
 import page from '~/types/page'
 import indexPage from '~/constants/pages/index-page'
-import domain from '~/constants/domain'
+import notFoundPage from '~/constants/pages/not-found-page'
 
 export default Vue.extend({
   components: { PsSideNavigation, PsSpHeader },
@@ -35,12 +35,13 @@ export default Vue.extend({
   data() {
     return {
       indexPage,
+      notFoundPage,
     }
   },
 
   head() {
     return {
-      title: this.browsedPage.meta.title,
+      title: this.browsedPage.metaTitle,
       titleTemplate: '%s｜Portfolio of Kaito Horiuchi',
       meta: [
         { charset: 'utf-8' },
@@ -53,12 +54,6 @@ export default Vue.extend({
         },
       ],
     }
-  },
-
-  computed: {
-    metaURL(): string {
-      return domain + this.browsedPage.path
-    },
   },
 })
 </script>

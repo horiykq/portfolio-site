@@ -1,4 +1,5 @@
 export type metaName =
+  | 'viewport'
   | 'description'
   | 'og:title'
   | 'og:type'
@@ -20,8 +21,22 @@ export type meta = {
   content: string
 }
 
+export type metaWithHid = {
+  hid: metaName
+  name: metaName
+  content: string
+}
+
+export type metaCharset = {
+  charset: string
+}
+
+export type convertedMeta = meta | metaWithHid | metaCharset
+
 type metaData = {
   title: string
+  titleTemplate: string
+  meta: convertedMeta[]
 }
 
 export default metaData
