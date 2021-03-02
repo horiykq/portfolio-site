@@ -99,7 +99,9 @@ export default {
     },
   },
 
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+    },
   },
 }
