@@ -1,14 +1,14 @@
 <template>
   <ps-section>
-    <ps-first-heading jp-heading="note株式会社"> note inc. </ps-first-heading>
+    <ps-second-heading>note inc.（note株式会社）</ps-second-heading>
   </ps-section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
+import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
 export default Vue.extend({
-  components: { PsSection, PsFirstHeading },
+  components: { PsSection, PsSecondHeading },
 })
 </script>

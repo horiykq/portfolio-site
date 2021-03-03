@@ -27,11 +27,10 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-second-heading';
 #{$block} {
+  font-weight: 300;
+  @include font-size(2.4);
   &__enFont {
     font-family: $en-font;
-    @include font-size(2.4);
-
-    font-weight: 300;
   }
 }
 </style>

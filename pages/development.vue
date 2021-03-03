@@ -1,8 +1,16 @@
 <template>
   <ps-separate-view :browsed-page="page">
     <ps-page-header>{{ page.name }}</ps-page-header>
-    <ps-dev-fa />
+
+    <ps-first-heading jp-heading="個人開発">
+      Personal Development
+    </ps-first-heading>
     <ps-dev-line-bot />
+
+    <ps-first-heading jp-heading="チーム開発">
+      Team Development
+    </ps-first-heading>
+    <ps-dev-fa />
     <ps-dev-synq />
     <ps-dev-static-sites />
   </ps-separate-view>
@@ -10,6 +18,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsPageHeader from '~/components/common-components/ps-page-header.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import PsDevFa from '~/components/development-components/sections/ps-dev-fa.vue'
@@ -26,6 +35,7 @@ export default Vue.extend({
     PsDevSynq,
     PsDevStaticSites,
     PsPageHeader,
+    PsFirstHeading,
   },
 
   data() {
