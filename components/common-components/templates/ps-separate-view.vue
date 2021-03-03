@@ -50,7 +50,7 @@ export default Vue.extend({
           hid: 'description',
           name: 'description',
           content:
-            '堀内 凱登 / Kaito Horiuchi (hori) のポートフォリオサイトです。趣味のパソコンを仕事にすることを目指しています。',
+            '大学生エンジニア 堀内 凱登 / Kaito Horiuchi (hori) のポートフォリオサイトです。',
         },
       ],
     }
