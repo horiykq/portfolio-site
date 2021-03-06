@@ -1,14 +1,23 @@
 <template>
   <ps-section>
-    <ps-second-heading>note inc.（note株式会社）</ps-second-heading>
+    <ps-career-template>
+      <template #company> note株式会社 </template>
+      <template #info> （2021.2 - 現在, エンジニア） </template>
+      <template #technology>
+        <ul>
+          <li>Webフロントエンド（Nuxt.js）</li>
+          <li>Webサーバサイド（Ruby on Rails）</li>
+        </ul>
+      </template>
+    </ps-career-template>
   </ps-section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
+import PsCareerTemplate from '../ps-career-template.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
 export default Vue.extend({
-  components: { PsSection, PsSecondHeading },
+  components: { PsSection, PsCareerTemplate },
 })
 </script>

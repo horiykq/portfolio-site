@@ -1,14 +1,25 @@
 <template>
   <ps-section>
-    <ps-second-heading>QUANDO, Inc.（株式会社クアンド）</ps-second-heading>
+    <ps-career-template>
+      <template #company> 株式会社クアンド </template>
+      <template #info> （2019.10 - 2020.10, エンジニア） </template>
+      <template #technology>
+        <ul>
+          <li>Webフロントエンド（React.js, Gatsby.js, Vue.js）</li>
+          <li>Webサーバサイド（Django）</li>
+          <li>機械学習（TensorFlow, Keras, CNN）</li>
+          <li>ハードウェア（RevPi, GigEカメラ, PLC）</li>
+        </ul>
+      </template>
+    </ps-career-template>
   </ps-section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
+import PsCareerTemplate from '../ps-career-template.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
 export default Vue.extend({
-  components: { PsSection, PsSecondHeading },
+  components: { PsSection, PsCareerTemplate },
 })
 </script>
