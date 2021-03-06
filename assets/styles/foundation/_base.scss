@@ -8,5 +8,8 @@ body {
 
 p {
   font-weight: 300;
+  @include mq_sp() {
+    font-weight: 400;
+  }
   @include font-size(1.6);
 }
