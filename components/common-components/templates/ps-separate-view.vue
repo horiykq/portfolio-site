@@ -3,8 +3,11 @@
     <div class="ps-seperate-view__sidenav">
       <ps-side-navigation :browsed-page="browsedPage" />
     </div>
-    <div v-if="browsedPage !== indexPage" class="ps-seperate-view__spHeader">
-      <ps-sp-header />
+    <div
+      v-if="browsedPage !== indexPage"
+      class="ps-seperate-view__mobileHeader"
+    >
+      <ps-mobile-header />
     </div>
     <div class="ps-seperate-view__contentsOuter">
       <div class="ps-seperate-view__contentsInner">
@@ -17,13 +20,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsSideNavigation from '../side-navigation/ps-side-navigation.vue'
-import PsSpHeader from '../ps-sp-header.vue'
+import PsMobileHeader from '../ps-mobile-header.vue'
 import page from '~/types/page'
 import indexPage from '~/constants/pages/index-page'
 import notFoundPage from '~/constants/pages/not-found-page'
 
 export default Vue.extend({
-  components: { PsSideNavigation, PsSpHeader },
+  components: { PsSideNavigation, PsMobileHeader },
 
   props: {
     browsedPage: {
@@ -76,12 +79,9 @@ $block: '.ps-seperate-view';
       display: none;
     }
   }
-  &__spHeader {
+  &__mobileHeader {
     width: 100%;
     @include mq_pc {
-      display: none;
-    }
-    @include mq_tablet {
       display: none;
     }
   }

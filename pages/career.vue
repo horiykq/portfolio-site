@@ -2,7 +2,7 @@
   <ps-separate-view :browsed-page="page">
     <ps-page-header>{{ page.name }}</ps-page-header>
 
-    <ps-first-heading jp-heading="大学など">Academic</ps-first-heading>
+    <ps-first-heading jp-heading="大学について">Academic</ps-first-heading>
     <ps-career-qu />
 
     <ps-first-heading jp-heading="インターンシップ">

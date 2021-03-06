@@ -4,7 +4,7 @@ const aboutPage: page = {
   path: '/about',
   name: 'About me',
   visible: true,
-  metaTitle: 'ABOUT',
+  metaTitle: 'ABOUT ME',
 }
 
 export default aboutPage

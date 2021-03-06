@@ -61,7 +61,12 @@ $block: '.ps-side-navigation';
   &__inner {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 96px);
+    @include mq_pc {
+      width: calc(100% - 96px);
+    }
+    @include mq_tablet {
+      width: 100%;
+    }
     @include mq_sp {
       width: 100%;
     }

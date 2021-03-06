@@ -124,6 +124,7 @@ $block: '.ps-about-history';
 #{$block} {
   &__year {
     margin: 36px 0 14px 0;
+    @include font-size(2.4);
   }
   &__picture {
     margin: 16px 0;

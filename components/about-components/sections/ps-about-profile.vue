@@ -30,19 +30,15 @@
         <p class="ps-about-profile__listValue">福岡県</p>
       </li>
       <li class="ps-about-profile__list">
-        <p class="ps-about-profile__listKey">年齢</p>
-        <p class="ps-about-profile__listValue">21歳（2000年生まれ）</p>
-      </li>
-      <li class="ps-about-profile__list">
         <p class="ps-about-profile__listKey">学年</p>
         <p class="ps-about-profile__listValue">大学2年生（23卒）</p>
       </li>
       <li class="ps-about-profile__list">
         <p class="ps-about-profile__listKey">趣味</p>
         <p class="ps-about-profile__listValue">
-          ガジェット系（パソコンの換装・OS入れ替えなど）
+          ガジェット系
           <br />
-          音楽（カラオケ・ピアノ・ギターなど）
+          音楽（ピアノ・ギター・カラオケなど）
         </p>
       </li>
     </ul>

@@ -1,8 +1,8 @@
 <template>
-  <header class="ps-sp-header">
-    <div class="ps-sp-header__outer">
+  <header class="ps-mobile-header">
+    <div class="ps-mobile-header__outer">
       <ps-link to="/">
-        <p class="ps-sp-header__inner">
+        <p class="ps-mobile-header__inner">
           Portfolio of
           <br />
           Kaito Horiuchi
@@ -21,7 +21,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$block: '.ps-sp-header';
+$block: '.ps-mobile-header';
 #{$block} {
   position: fixed;
   top: 0;

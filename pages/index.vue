@@ -1,6 +1,6 @@
 <template>
   <ps-separate-view :browsed-page="page">
-    <div class="ps-index-page__sp">
+    <div class="ps-index-page__mobile">
       <ps-side-navigation :browsed-page="page" />
     </div>
   </ps-separate-view>
@@ -25,11 +25,11 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-index-page';
 #{$block} {
-  &__sp {
-    display: none;
-    @include mq_sp {
-      display: inline-block;
-      padding: calc(50vh - 459.2px / 2 - 128px) 0 0 0;
+  &__mobile {
+    display: inline-block;
+    padding: calc(50vh - 459.2px / 2 - 128px) 0 0 0;
+    @include mq_pc() {
+      display: none;
     }
   }
 }

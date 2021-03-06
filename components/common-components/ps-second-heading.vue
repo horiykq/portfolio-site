@@ -28,7 +28,6 @@ export default Vue.extend({
 $block: '.ps-second-heading';
 #{$block} {
   font-weight: 300;
-  @include font-size(2.4);
   &__enFont {
     font-family: $en-font;
   }
