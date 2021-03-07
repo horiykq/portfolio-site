@@ -23,9 +23,6 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-mobile-header';
 #{$block} {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: inline-block;
   width: 100vw;
   padding: 16px 32px;

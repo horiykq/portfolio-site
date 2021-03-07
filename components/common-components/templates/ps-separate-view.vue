@@ -80,6 +80,9 @@ $block: '.ps-seperate-view';
     }
   }
   &__mobileHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     @include mq_pc {
       display: none;
