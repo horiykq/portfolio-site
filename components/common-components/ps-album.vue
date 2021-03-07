@@ -64,6 +64,8 @@ $block: '.ps-album';
   padding: 36px 0;
   &__thumbnailsWrapper {
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
   }
   &__thumbnailButton {
     width: 68px;
@@ -87,7 +89,8 @@ $block: '.ps-album';
     margin: 16px 0;
     width: 100%;
     height: calc(636px / 4 * 3);
-    object-fit: cover;
+    object-fit: contain;
+    border: 1px solid $color-border-gray;
     @include mq_sp {
       height: calc((100vw - 64px) / 4 * 3);
     }

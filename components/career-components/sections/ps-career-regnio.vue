@@ -11,6 +11,9 @@
           <li>ミドルウェア（Docker, Kubernetes, k3s）</li>
         </ul>
       </template>
+      <template #paragraph>
+        <ps-album :images="albumImages" />
+      </template>
     </ps-career-template>
   </ps-section>
 </template>
@@ -19,7 +22,15 @@
 import Vue from 'vue'
 import PsCareerTemplate from '../ps-career-template.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
+import regnioAlbumImages from '~/constants/album-images/regnio-album-images'
+import PsAlbum from '~/components/common-components/ps-album.vue'
 export default Vue.extend({
-  components: { PsSection, PsCareerTemplate },
+  components: { PsSection, PsCareerTemplate, PsAlbum },
+
+  data() {
+    return {
+      albumImages: regnioAlbumImages,
+    }
+  },
 })
 </script>
