@@ -205,8 +205,11 @@ $block: '.ps-album';
   &__link {
     padding: 1.6px;
     color: $color-dark-blue;
-    text-decoration: underline;
     margin-top: 8px;
+    transition: 0.4s all;
+    &:hover {
+      letter-spacing: 1px;
+    }
   }
 }
 </style>

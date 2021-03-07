@@ -1,5 +1,5 @@
 <template>
-  <ps-section>
+  <ps-section class="ps-career-note">
     <ps-career-template>
       <template #company> note株式会社 </template>
       <template #info> （2021.2 - 現在, エンジニア） </template>
@@ -11,7 +11,7 @@
       </template>
       <template #paragraph>
         <ps-image src="/images/note_logo.png" alt="note" />
-        <ps-paragraph>
+        <ps-paragraph class="ps-career-note__paragraph">
           カイゼンチームにて、noteフロントエンド・サーバサイドの開発、改善に従事。
         </ps-paragraph>
       </template>
@@ -29,3 +29,12 @@ export default Vue.extend({
   components: { PsSection, PsCareerTemplate, PsImage, PsParagraph },
 })
 </script>
+
+<style lang="scss" scoped>
+$block: '.ps-career-note';
+#{$block} {
+  &__paragraph {
+    margin-bottom: 32px;
+  }
+}
+</style>

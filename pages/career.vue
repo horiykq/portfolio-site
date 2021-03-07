@@ -11,6 +11,10 @@
     <ps-career-quando />
     <ps-career-regnio />
     <ps-career-note />
+
+    <ps-recommend-page class="about__recommend" :to="nextPage.path">
+      {{ nextPage.name }}
+    </ps-recommend-page>
   </ps-separate-view>
 </template>
 
@@ -22,8 +26,10 @@ import PsCareerQuando from '~/components/career-components/sections/ps-career-qu
 import PsCareerRegnio from '~/components/career-components/sections/ps-career-regnio.vue'
 import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsPageHeader from '~/components/common-components/ps-page-header.vue'
+import PsRecommendPage from '~/components/common-components/ps-recommend-page.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import careerPage from '~/constants/pages/career-page'
+import developmentPage from '~/constants/pages/development-page'
 export default Vue.extend({
   components: {
     PsSeparateView,
@@ -33,11 +39,13 @@ export default Vue.extend({
     PsCareerQu,
     PsPageHeader,
     PsFirstHeading,
+    PsRecommendPage,
   },
 
   data() {
     return {
       page: careerPage,
+      nextPage: developmentPage,
     }
   },
 })

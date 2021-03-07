@@ -15,3 +15,10 @@ export default Vue.extend({
   components: { PsSection, PsParagraph },
 })
 </script>
+
+<style lang="scss" scoped>
+$block: '.ps-career-qu';
+#{$block} {
+  padding-bottom: 64px;
+}
+</style>
