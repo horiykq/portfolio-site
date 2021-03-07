@@ -13,9 +13,9 @@
       <slot name="technology" />
     </div>
 
-    <p class="ps-career-template__paragraph">
+    <div class="ps-career-template__paragraph">
       <slot name="paragraph" />
-    </p>
+    </div>
   </ps-section>
 </template>
 
