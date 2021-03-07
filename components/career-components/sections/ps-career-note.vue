@@ -11,6 +11,9 @@
       </template>
       <template #paragraph>
         <ps-image src="/images/note_logo.png" alt="note" />
+        <ps-paragraph>
+          カイゼンチームにて、noteフロントエンド・サーバサイドの開発、改善に従事。
+        </ps-paragraph>
       </template>
     </ps-career-template>
   </ps-section>
@@ -21,7 +24,8 @@ import Vue from 'vue'
 import PsCareerTemplate from '../ps-career-template.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
 import PsImage from '~/components/common-components/ps-image.vue'
+import PsParagraph from '~/components/common-components/ps-paragraph.vue'
 export default Vue.extend({
-  components: { PsSection, PsCareerTemplate, PsImage },
+  components: { PsSection, PsCareerTemplate, PsImage, PsParagraph },
 })
 </script>

@@ -24,16 +24,23 @@
       :alt="images[choosedImageIndex].alt"
     />
     <div class="ps-album__controlButtonsWrapper">
-      <button class="ps-album__controlButton" @click="onClickPrevious()">
+      <button :class="computedPreviousButtonClass" @click="onClickPrevious()">
         {{ controlButtonArrows.previous }} Previous
       </button>
-      <button class="ps-album__controlButton" @click="onClickNext()">
+      <button :class="computedNextButtonClass" @click="onClickNext()">
         Next {{ controlButtonArrows.next }}
       </button>
     </div>
     <ps-paragraph>
       {{ images[choosedImageIndex].description }}
     </ps-paragraph>
+    <ps-normal-link
+      v-if="images[choosedImageIndex].link != null"
+      class="ps-album__link"
+      :href="images[choosedImageIndex].link"
+    >
+      >> ページを見てみる
+    </ps-normal-link>
   </div>
 </template>
 
@@ -41,12 +48,13 @@
 import Vue from 'vue'
 import PsImage from './ps-image.vue'
 import PsParagraph from './ps-paragraph.vue'
-import albumImage from '~/types/album-images'
+import PsNormalLink from './ps-normal-link.vue'
+import albumImage from '~/types/album-image'
 import imageAspect, { imageAspectType } from '~/types/image-aspect'
 import imageFitting, { imageFittingType } from '~/types/image-fitting'
 import controlButtonArrows from '~/constants/control-button-arrows'
 export default Vue.extend({
-  components: { PsImage, PsParagraph },
+  components: { PsImage, PsParagraph, PsNormalLink },
 
   props: {
     images: {
@@ -73,10 +81,14 @@ export default Vue.extend({
   computed: {
     computedImageClass(): string {
       let returnClass = 'ps-album__image'
-      if (this.aspect === imageAspect.wide) {
-        returnClass += ' ps-album__wideAspectImage'
-      } else {
-        returnClass += ' ps-album__standardAspectImage'
+
+      switch (this.aspect) {
+        case imageAspect.wide:
+          returnClass += ' ps-album__wideAspectImage'
+          break
+        case imageAspect.standard:
+          returnClass += ' ps-album__standardAspectImage'
+          break
       }
       if (this.fitting === imageFitting.cover) {
         returnClass += ' ps-album__coverImage'
@@ -84,6 +96,16 @@ export default Vue.extend({
         returnClass += ' ps-album__containImage'
       }
       return returnClass
+    },
+    computedPreviousButtonClass(): string {
+      return this.choosedImageIndex === 0
+        ? 'ps-album__controlButton ps-album__disabledControlButton'
+        : 'ps-album__controlButton'
+    },
+    computedNextButtonClass(): string {
+      return this.choosedImageIndex === this.images.length - 1
+        ? 'ps-album__controlButton ps-album__disabledControlButton'
+        : 'ps-album__controlButton'
     },
   },
 
@@ -171,6 +193,20 @@ $block: '.ps-album';
       letter-spacing: 1px;
     }
     @include font-size(1.8);
+  }
+  &__disabledControlButton {
+    cursor: initial;
+    color: $color-disabled;
+    transition: none;
+    &:hover {
+      letter-spacing: 0;
+    }
+  }
+  &__link {
+    padding: 1.6px;
+    color: $color-dark-blue;
+    text-decoration: underline;
+    margin-top: 8px;
   }
 }
 </style>

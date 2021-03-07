@@ -14,8 +14,8 @@
       <template #paragraph>
         <ps-album
           :images="albumImages"
-          :aspect="imageAspect.standard"
-          :fitting="imageFitting.contain"
+          :aspect="imageAspect.wide"
+          :fitting="imageFitting.cover"
         />
       </template>
     </ps-career-template>
