@@ -12,7 +12,11 @@
         </ul>
       </template>
       <template #paragraph>
-        <ps-album :images="albumImages" />
+        <ps-album
+          :images="albumImages"
+          :aspect="imageAspect.standard"
+          :fitting="imageFitting.contain"
+        />
       </template>
     </ps-career-template>
   </ps-section>
@@ -24,12 +28,16 @@ import PsCareerTemplate from '../ps-career-template.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
 import regnioAlbumImages from '~/constants/album-images/regnio-album-images'
 import PsAlbum from '~/components/common-components/ps-album.vue'
+import imageAspect from '~/types/image-aspect'
+import imageFitting from '~/types/image-fitting'
 export default Vue.extend({
   components: { PsSection, PsCareerTemplate, PsAlbum },
 
   data() {
     return {
       albumImages: regnioAlbumImages,
+      imageAspect,
+      imageFitting,
     }
   },
 })

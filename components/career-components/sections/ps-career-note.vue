@@ -9,6 +9,9 @@
           <li>Webサーバサイド（Ruby on Rails）</li>
         </ul>
       </template>
+      <template #paragraph>
+        <ps-image src="/images/note_logo.png" alt="note" />
+      </template>
     </ps-career-template>
   </ps-section>
 </template>
@@ -17,7 +20,8 @@
 import Vue from 'vue'
 import PsCareerTemplate from '../ps-career-template.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
+import PsImage from '~/components/common-components/ps-image.vue'
 export default Vue.extend({
-  components: { PsSection, PsCareerTemplate },
+  components: { PsSection, PsCareerTemplate, PsImage },
 })
 </script>
