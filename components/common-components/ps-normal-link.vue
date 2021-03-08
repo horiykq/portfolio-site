@@ -25,7 +25,6 @@ export default Vue.extend({
 $block: '.ps-normal-link';
 #{$block} {
   text-decoration: none;
-  color: $color-default-black;
   display: inline-block;
 }
 </style>
