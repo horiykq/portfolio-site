@@ -38,6 +38,5 @@ export default Vue.extend({
 $block: '.ps-image';
 #{$block} {
   width: 100%;
-  height: 100%;
 }
 </style>
