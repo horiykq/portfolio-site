@@ -1,20 +1,20 @@
 <template>
   <ps-section>
-    <ps-second-heading>LINEbot「なんでもQRくん」</ps-second-heading>
+    <ps-second-heading>Qiita記事投稿</ps-second-heading>
     <ps-album
+      :images="qiitaAlbumImages"
       :aspect="imageAspect.standard"
       :fitting="imageFitting.contain"
-      :images="linebotAlbumImages"
     />
   </ps-section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PsAlbum from '~/components/common-components/ps-album.vue'
-import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
-import linebotAlbumImages from '~/constants/album-images/linebot-album-images'
+import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
+import PsAlbum from '~/components/common-components/ps-album.vue'
+import qiitaAlbumImages from '~/constants/album-images/qiita-album-images'
 import imageAspect from '~/types/image-aspect'
 import imageFitting from '~/types/image-fitting'
 export default Vue.extend({
@@ -22,7 +22,7 @@ export default Vue.extend({
 
   data() {
     return {
-      linebotAlbumImages,
+      qiitaAlbumImages,
       imageAspect,
       imageFitting,
     }

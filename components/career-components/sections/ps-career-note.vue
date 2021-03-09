@@ -12,7 +12,8 @@
       <template #paragraph>
         <ps-image src="/images/note_logo.png" alt="note" />
         <ps-paragraph class="ps-career-note__paragraph">
-          カイゼンチームにて、noteフロントエンド・サーバサイドの開発、改善に従事。
+          カイゼンチームにて、noteフロントエンド(Nuxt.js)・サーバサイド(Ruby on
+          Rails)を開発・改善している。
         </ps-paragraph>
       </template>
     </ps-career-template>
