@@ -15,13 +15,12 @@ const quandoAlbumImages: albumImage[] = [
       'React.jsでのQiitaトップページ模写。Webフロントエンドの実装はこの時が初めてだった。Atomic Designやステートフックを取り入れた。',
     link: 'https://github.com/horri1520/qiita-toppage',
   },
-  // {
-  //   src: '/images/IMG_2625.jpg',
-  //   alt: 'エッジ検出CNNモデル',
-  //   description:
-  //     'TensorFlowとKerasで開発したエッジ検出CNNモデル。Webアプリに組み込むことで、鉄板加工工場のライン上でリアルタイム検出が可能となった。',
-  //   link: null,
-  // },
+  {
+    src: '/images/IMG_2625.jpg',
+    alt: 'エッジ検出CNNモデル',
+    description: 'TensorFlowとKerasで開発したエッジ検出CNNモデル。',
+    link: null,
+  },
   // {
   //   src: '/images/synq-lp.png',
   //   alt: 'SynQ Remote LP',

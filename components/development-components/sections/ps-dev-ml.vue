@@ -1,25 +1,32 @@
 <template>
   <ps-section class="ps-dev-ml">
     <ps-second-heading>機械学習コンペ</ps-second-heading>
-    <ps-image
-      class="ps-dev-ml__image"
-      src="/images/IMG_0202.PNG"
-      alt="solafune初subツイート"
+    <ps-album
+      :images="solafuneAlbumImages"
+      :aspect="imageAspect.standard"
+      :fitting="imageFitting.contain"
     />
-    <ps-paragraph>
-      趣味でsolafuneやKaggleなどの機械学習コンペに時々参加している。（まだはじめて間もない）
-    </ps-paragraph>
   </ps-section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PsImage from '~/components/common-components/ps-image.vue'
-import PsParagraph from '~/components/common-components/ps-paragraph.vue'
+import PsAlbum from '~/components/common-components/ps-album.vue'
 import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
+import solafuneAlbumImages from '~/constants/album-images/solafune-album-images'
+import imageAspect from '~/types/image-aspect'
+import imageFitting from '~/types/image-fitting'
 export default Vue.extend({
-  components: { PsSection, PsSecondHeading, PsImage, PsParagraph },
+  components: { PsSection, PsSecondHeading, PsAlbum },
+
+  data() {
+    return {
+      solafuneAlbumImages,
+      imageAspect,
+      imageFitting,
+    }
+  },
 })
 </script>
 
@@ -27,8 +34,5 @@ export default Vue.extend({
 $block: '.ps-dev-ml';
 #{$block} {
   padding: 32px 0;
-  &__image {
-    margin: 48px 0;
-  }
 }
 </style>

@@ -2,9 +2,7 @@
   <ps-separate-view :browsed-page="page">
     <ps-page-header>{{ page.name }}</ps-page-header>
 
-    <ps-first-heading jp-heading="個人開発">
-      Personal Development
-    </ps-first-heading>
+    <ps-first-heading jp-heading="個人開発"> Personal </ps-first-heading>
     <ps-dev-line-bot />
 
     <ps-first-heading jp-heading="その他の活動"> Others </ps-first-heading>
