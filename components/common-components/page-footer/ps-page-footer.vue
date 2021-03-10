@@ -22,12 +22,12 @@ export default Vue.extend({
 
   props: {
     previousPage: {
-      type: Object as () => page | null,
-      required: true,
+      type: Object as () => page,
+      default: null,
     },
     nextPage: {
-      type: Object as () => page | null,
-      required: true,
+      type: Object as () => page,
+      default: null,
     },
   },
 
