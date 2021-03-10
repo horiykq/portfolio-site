@@ -2,8 +2,10 @@
   <div class="ps-recommend-page">
     <ps-link :to="to" class="ps-recommend-page__link">
       <p class="ps-recommend-page__recommend">
+        {{ type === 'previous' ? pageFooterArrows.previous : null }}
         {{ mainLabel }}
-        {{ type === 'next' || type === 'previous' ? 'Page' : '' }} >>
+        {{ type === 'next' || type === 'previous' ? 'Page' : '' }}
+        {{ type === 'next' ? pageFooterArrows.next : null }}
       </p>
       <slot />
     </ps-link>
@@ -12,7 +14,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import psLink from './ps-link.vue'
+import psLink from '../ps-link.vue'
+import pageFooterArrows from '~/constants/page-footer-arrows'
 export default Vue.extend({
   components: { psLink },
 
@@ -25,6 +28,12 @@ export default Vue.extend({
       type: String,
       default: 'next',
     },
+  },
+
+  data() {
+    return {
+      pageFooterArrows,
+    }
   },
 
   computed: {
@@ -47,7 +56,6 @@ $block: '.ps-recommend-page';
 #{$block} {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
   font-family: $en-font;
   &__link {
     text-transform: uppercase;

@@ -12,9 +12,7 @@
     <ps-dev-atcoder />
     <ps-dev-ml />
 
-    <ps-recommend-page :to="nextPage.path" type="next">
-      {{ nextPage.name }}
-    </ps-recommend-page>
+    <ps-page-footer :previous-page="previousPage" :next-page="nextPage" />
   </ps-separate-view>
 </template>
 
@@ -22,13 +20,14 @@
 import Vue from 'vue'
 import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsPageHeader from '~/components/common-components/ps-page-header.vue'
-import PsRecommendPage from '~/components/common-components/ps-recommend-page.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import PsDevAtcoder from '~/components/development-components/sections/ps-dev-atcoder.vue'
 import PsDevLineBot from '~/components/development-components/sections/ps-dev-line-bot.vue'
 import PsDevQiita from '~/components/development-components/sections/ps-dev-qiita.vue'
 import developmentPage from '~/constants/pages/development-page'
 import technologyPage from '~/constants/pages/technology-page'
+import PsPageFooter from '~/components/common-components/page-footer/ps-page-footer.vue'
+import careerPage from '~/constants/pages/career-page'
 
 export default Vue.extend({
   components: {
@@ -38,12 +37,13 @@ export default Vue.extend({
     PsFirstHeading,
     PsDevAtcoder,
     PsDevQiita,
-    PsRecommendPage,
+    PsPageFooter,
   },
 
   data() {
     return {
       page: developmentPage,
+      previousPage: careerPage,
       nextPage: technologyPage,
     }
   },

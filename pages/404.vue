@@ -12,7 +12,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
-import PsRecommendPage from '~/components/common-components/ps-recommend-page.vue'
+import PsRecommendPage from '~/components/common-components/page-footer/ps-recommend-page.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
 import notFoundPage from '~/constants/pages/not-found-page'
 export default Vue.extend({
