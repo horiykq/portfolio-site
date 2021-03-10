@@ -26,21 +26,24 @@ export default Vue.extend({
 
   computed: {
     computedIconClass(): string {
-      switch (this.technology.name) {
-        case 'css':
-          return 'ps-tech-icon__portraitIcon'
-        case 'raspi':
-          return 'ps-tech-icon__portraitIcon'
-        case 'flask':
-          return 'ps-tech-icon__landscapeIcon'
-        case 'django':
-          return 'ps-tech-icon__landscapeIcon'
-        case 'python':
-          return 'ps-tech-icon__landscapeIcon'
-        case 'revpi':
-          return 'ps-tech-icon__landscapeIcon'
-        default:
-          return 'ps-tech-icon__squareIcon'
+      const usePortraitStyleList = ['css', 'raspi', 'jupyter']
+      const useLandscapeStyleList = [
+        'flask',
+        'django',
+        'python',
+        'revpi',
+        'cuda',
+        'pandas',
+        'k3s',
+        'docker',
+      ]
+
+      if (usePortraitStyleList.includes(this.technology.name)) {
+        return 'ps-tech-icon__portraitIcon'
+      } else if (useLandscapeStyleList.includes(this.technology.name)) {
+        return 'ps-tech-icon__landscapeIcon'
+      } else {
+        return 'ps-tech-icon__squareIcon'
       }
     },
     iconSrc(): ImageData | string {
@@ -85,6 +88,36 @@ export default Vue.extend({
           return require('@/assets/icons/revpi-logo-300x150.png')
         case 'cam':
           return require('@/assets/icons/imaging_source_dfk-33gp1300-800x800.jpg')
+        case 'plc':
+          return require('@/assets/icons/plc.png')
+        case 'tensorflow':
+          return require('@/assets/icons/FullColorPrimary Icon.svg')
+        case 'keras':
+          return require('@/assets/icons/Keras_logo.svg')
+        case 'colab':
+          return require('@/assets/icons/colab_favicon_256px.png')
+        case 'jupyter':
+          return require('@/assets/icons/518px-Jupyter_logo.png')
+        case 'cuda':
+          return require('@/assets/icons/cuda.jpg')
+        case 'numpy':
+          return require('@/assets/icons/86498201-a8bd8680-bd39-11ea-9d08-66b610a8dc01.png')
+        case 'pandas':
+          return require('@/assets/icons/pandas.png')
+        case 'netlify':
+          return require('@/assets/icons/netlify.svg')
+        case 'vercel':
+          return require('@/assets/icons/6R0-p1Vf_400x400.jpg')
+        case 'heroku':
+          return require('@/assets/icons/heroku-logo-solid-gradient.svg')
+        case 'docker':
+          return require('@/assets/icons/vertical-logo-monochromatic.png')
+        case 'k8s':
+          return require('@/assets/icons/kubernetes.svg')
+        case 'k3s':
+          return require('@/assets/icons/k3s-icon-color.svg')
+        case 'ec2':
+          return require('@/assets/icons/Arch_Amazon-EC2_48.svg')
         default:
           return require('@/assets/icons/HTML5_Logo.svg')
       }
