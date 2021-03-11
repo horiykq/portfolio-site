@@ -1,10 +1,6 @@
 <template>
   <div class="ps-random-hamsters">
-    <ps-loader
-      v-if="currentHamstersImageIndex === -1"
-      class="ps-random-hamsters__loader"
-    />
-    <div v-else>
+    <div v-if="currentHamstersImageIndex !== -1">
       <ps-image
         class="ps-random-hamsters__image"
         :src="hamsterImages[currentHamstersImageIndex].src"
@@ -33,10 +29,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import PsImage from '../common-components/ps-image.vue'
-import PsLoader from '../common-components/ps-loader.vue'
 import hamsterImages from '~/constants/hamster-images'
 export default Vue.extend({
-  components: { PsImage, PsLoader },
+  components: { PsImage },
 
   data() {
     return {
@@ -62,13 +57,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-random-hamsters';
 #{$block} {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
   width: 100%;
   margin: -64px 0 -128px 0;
-  &__loader {
-    margin: calc((100vh - 172px) / 2) 0;
-  }
   &__image {
     width: 636px;
     height: 477px;
