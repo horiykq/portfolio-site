@@ -1,111 +1,56 @@
 <template>
   <div class="ps-random-hamsters">
-    <p v-if="updatingImage || !isInitializedCanvas">loading</p>
-    <canvas
-      ref="hamsterCanvas"
-      :width="pcCanvasWidth"
-      :height="pcCanvasHeight"
-      class="ps-random-hamsters__canvas"
-    />
-    <button @click="onClickRandom">random</button>
-  </div>
-
-  <!-- <div v-else class="ps-random-hamsters">
-    <ps-image
-      class="ps-random-hamsters__image"
-      :src="hamsterImages[currentHamstersImageIndex].src"
-      alt="飼っていたハムスター（たち）"
-    />
-    <canvas ref="hamsterCanvas" class="ps-random-hamsters__canvas" />
-    <p class="ps-random-hamsters__comment">
-      {{ hamsterImages[currentHamstersImageIndex].comment }}
-      <br />
-      （アクセスするたびに写真が変わります。）
-    </p>
-    <div class="ps-random-hamsters__promptWrapper">
-      <p class="ps-random-hamsters__prompt">
-        アクセスがめんどくさい方はこちらをどうぞ →
+    <ps-loader v-if="currentHamstersImageIndex === -1" />
+    <div v-else>
+      <ps-image
+        class="ps-random-hamsters__image"
+        :src="hamsterImages[currentHamstersImageIndex].src"
+        alt="飼っていたハムスター（たち）"
+      />
+      <p class="ps-random-hamsters__comment">
+        {{ hamsterImages[currentHamstersImageIndex].comment }}
+        <br />
+        （アクセスするたびに写真が変わります。）
       </p>
-      <button class="ps-random-hamsters__randomButton" @click="onClickRandom()">
-        ランダム
-      </button>
+      <div class="ps-random-hamsters__promptWrapper">
+        <p class="ps-random-hamsters__prompt">
+          アクセスがめんどくさい方はこちらをどうぞ →
+        </p>
+        <button
+          class="ps-random-hamsters__randomButton"
+          @click="updateRandomIndex()"
+        >
+          ランダム
+        </button>
+      </div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-// import PsImage from '../common-components/ps-image.vue'
+import PsImage from '../common-components/ps-image.vue'
+import PsLoader from '../common-components/ps-loader.vue'
 import hamsterImages from '~/constants/hamster-images'
 export default Vue.extend({
-  // components: { PsImage },
+  components: { PsImage, PsLoader },
 
   data() {
     return {
       hamsterImages,
-      isInitializedCanvas: false,
-      updatingImage: false,
-      updateError: false,
-      pcCanvasWidth: 636,
-      pcCanvasHeight: (636 / 4) * 3,
+      currentHamstersImageIndex: -1,
     }
   },
 
-  mounted(): void {
-    this.$nextTick(() => {
-      const canvasRef: any = this.$refs.hamsterCanvas
-      if (canvasRef == null) {
-        this.updateError = true
-      } else {
-        const canvasContext: CanvasRenderingContext2D = canvasRef.getContext(
-          '2d'
-        )
-        const img = new Image()
-        img.crossOrigin = '*'
-        const hamsterImageIndex = this.chooseRandomIndex()
-        img.src = hamsterImages[hamsterImageIndex].src
-        img.onload = () => {
-          canvasContext.drawImage(
-            img,
-            0,
-            0,
-            this.pcCanvasWidth,
-            this.pcCanvasHeight
-          )
-        }
-      }
-      this.isInitializedCanvas = true
-    })
+  mounted() {
+    this.updateRandomIndex()
   },
 
   methods: {
-    chooseRandomIndex(): number {
-      return Math.floor(Math.random() * Math.floor(this.hamsterImages.length))
-    },
-    onClickRandom(): void {
-      this.updatingImage = true
-      const canvasRef: any = this.$refs.hamsterCanvas
-      if (canvasRef == null) {
-        this.updateError = true
-      } else {
-        const canvasContext: CanvasRenderingContext2D = canvasRef.getContext(
-          '2d'
-        )
-        const img = new Image()
-        img.crossOrigin = '*'
-        const hamsterImageIndex = this.chooseRandomIndex()
-        img.src = hamsterImages[hamsterImageIndex].src
-        img.onload = () => {
-          canvasContext.drawImage(
-            img,
-            0,
-            0,
-            this.pcCanvasWidth,
-            this.pcCanvasHeight
-          )
-        }
-      }
-      this.updatingImage = false
+    updateRandomIndex(): void {
+      this.currentHamstersImageIndex = Math.floor(
+        Math.random() * Math.floor(this.hamsterImages.length)
+      )
     },
   },
 })
@@ -115,6 +60,12 @@ export default Vue.extend({
 $block: '.ps-random-hamsters';
 #{$block} {
   margin: -64px 0 -128px 0;
+  &__image {
+    width: 636px;
+    height: 477px;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
   &__comment {
     margin-top: 8px;
     height: 70px;
