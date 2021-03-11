@@ -1,7 +1,7 @@
 <template>
   <ps-separate-view :browsed-page="page">
     <div class="ps-index-page__pc">
-      <!-- <ps-random-hamsters /> -->
+      <ps-random-hamsters />
     </div>
     <div class="ps-index-page__mobile">
       <ps-side-navigation :browsed-page="page" />
@@ -13,13 +13,13 @@
 import Vue from 'vue'
 import PsSideNavigation from '~/components/common-components/side-navigation/ps-side-navigation.vue'
 import PsSeparateView from '~/components/common-components/templates/ps-separate-view.vue'
-// import PsRandomHamsters from '~/components/index-components/ps-random-hamsters.vue'
+import PsRandomHamsters from '~/components/index-components/ps-random-hamsters.vue'
 import indexPage from '~/constants/pages/index-page'
 export default Vue.extend({
   components: {
     PsSeparateView,
     PsSideNavigation,
-    // PsRandomHamsters
+    PsRandomHamsters,
   },
 
   data() {

@@ -13,7 +13,7 @@
         <ps-image src="/images/note_logo.png" alt="note" />
         <ps-paragraph class="ps-career-note__paragraph">
           カイゼンチームにて、noteフロントエンド(Nuxt.js)・サーバサイド(Ruby on
-          Rails)を開発・改善している。
+          Rails)の開発に従事。
         </ps-paragraph>
       </template>
     </ps-career-template>

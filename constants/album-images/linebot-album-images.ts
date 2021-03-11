@@ -5,7 +5,7 @@ const linebotAlbumImages: albumImage[] = [
     src: '/images/IMG_0199.PNG',
     alt: '実際に作ったLINEbotアカウント',
     description:
-      '送った文字をQRコードに変換してくれるLINEbot。Web上に便利ツールとしてすでにあるものだったが、LINE感覚で使用できると便利だなと思い開発。',
+      '送った文字をQRコードに変換してくれるLINEbot。FlaskでLINE Messaging APIを利用しており、Heroku上で稼働している。',
     link: null,
   },
   {
