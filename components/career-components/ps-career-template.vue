@@ -46,7 +46,7 @@ $block: '.ps-career-template';
   &__technologyList {
     padding-left: 32px;
     font-weight: 300;
-    @include mq_sp() {
+    @include mq_sp {
       font-weight: 400;
     }
   }

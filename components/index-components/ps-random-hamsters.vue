@@ -6,21 +6,25 @@
         :src="hamsterImages[currentHamstersImageIndex].src"
         alt="飼っていたハムスター（たち）"
       />
-      <p class="ps-random-hamsters__comment">
-        {{ hamsterImages[currentHamstersImageIndex].comment }}
-        <br />
-        （アクセスするたびに写真が変わります。）
-      </p>
-      <div class="ps-random-hamsters__promptWrapper">
-        <p class="ps-random-hamsters__prompt">
-          アクセスがめんどくさい方はこちらをどうぞ →
+      <div class="ps-random-hamsters__detailWrapper">
+        <p class="ps-random-hamsters__comment">
+          {{ hamsterImages[currentHamstersImageIndex].comment }}
+          <br />
+          （アクセスするたびに写真が変わります。）
         </p>
-        <button
-          class="ps-random-hamsters__randomButton"
-          @click="updateRandomIndex()"
-        >
-          ランダム
-        </button>
+        <div class="ps-random-hamsters__promptWrapper">
+          <p class="ps-random-hamsters__prompt">
+            アクセスがめんどくさい方はこちらをどうぞ
+            <span class="ps-random-hamsters__rightArrow">→</span>
+            <span class="ps-random-hamsters__downArrow">↓</span>
+          </p>
+          <button
+            class="ps-random-hamsters__randomButton"
+            @click="updateRandomIndex()"
+          >
+            ランダム
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -58,17 +62,34 @@ export default Vue.extend({
 $block: '.ps-random-hamsters';
 #{$block} {
   display: inline-block;
-  width: 100%;
-  margin: -64px 0 -128px 0;
+  padding: 64px 0;
+  @include mq_pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: -128px 0;
+  }
   &__image {
-    width: 636px;
-    height: 477px;
     object-fit: contain;
-    margin-bottom: 16px;
+    @include mq_sp {
+      width: 100%;
+    }
+    @include mq_pc {
+      width: 636px;
+      height: 477px;
+    }
+  }
+  &__detailWrapper {
+    display: inline-block;
+    width: 100%;
   }
   &__comment {
     margin-top: 8px;
-    height: 70px;
+    @include mq_pc {
+      height: 70px;
+    }
   }
   &__promptWrapper {
     margin-top: 16px;
@@ -79,6 +100,20 @@ $block: '.ps-random-hamsters';
   &__randomButton {
     font-family: $jp-font;
     padding: 1.6px;
+    font-weight: 500;
+  }
+  &__rightArrow {
+    @include mq_sp {
+      display: none;
+    }
+  }
+  &__downArrow {
+    @include mq_pc {
+      display: none;
+    }
+    @include mq_tablet {
+      display: none;
+    }
   }
 }
 </style>

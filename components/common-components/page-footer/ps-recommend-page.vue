@@ -57,7 +57,7 @@ $block: '.ps-recommend-page';
   display: flex;
   justify-content: flex-end;
   font-family: $en-font;
-  @include mq_sp() {
+  @include mq_sp {
     @include font-size(1.4);
   }
   &__link {
@@ -74,7 +74,7 @@ $block: '.ps-recommend-page';
     text-transform: capitalize;
     @include font-size(1.8);
 
-    @include mq_sp() {
+    @include mq_sp {
       @include font-size(1.6);
     }
   }

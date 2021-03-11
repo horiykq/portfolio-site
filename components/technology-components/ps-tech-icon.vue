@@ -135,7 +135,7 @@ $block: '.ps-tech-icon';
   align-items: center;
   width: 120px;
   height: 120px;
-  @include mq_sp() {
+  @include mq_sp {
     width: 96px;
     height: 96px;
   }
@@ -145,7 +145,7 @@ $block: '.ps-tech-icon';
     justify-content: center;
     width: 64px;
     height: 64px;
-    @include mq_sp() {
+    @include mq_sp {
       width: 48px;
       height: 48px;
     }
@@ -153,20 +153,20 @@ $block: '.ps-tech-icon';
   &__squareIcon {
     width: 64px;
     height: 64px;
-    @include mq_sp() {
+    @include mq_sp {
       width: 48px;
       height: 48px;
     }
   }
   &__portraitIcon {
     height: 64px;
-    @include mq_sp() {
+    @include mq_sp {
       height: 48px;
     }
   }
   &__landscapeIcon {
     width: 64px;
-    @include mq_sp() {
+    @include mq_sp {
       width: 48px;
     }
   }

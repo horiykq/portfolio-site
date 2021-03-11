@@ -121,7 +121,7 @@ $block: '.ps-tech-experienced';
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    @include mq_pc() {
+    @include mq_pc {
       width: 600px;
     }
   }

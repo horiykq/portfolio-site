@@ -5,6 +5,7 @@
     </div>
     <div class="ps-index-page__mobile">
       <ps-side-navigation :browsed-page="page" />
+      <ps-random-hamsters />
     </div>
   </ps-separate-view>
 </template>
@@ -34,17 +35,19 @@ export default Vue.extend({
 $block: '.ps-index-page';
 #{$block} {
   &__pc {
-    @include mq_sp() {
+    @include mq_sp {
       display: none;
     }
-    @include mq_tablet() {
+    @include mq_tablet {
       display: none;
     }
   }
   &__mobile {
     display: inline-block;
-    padding: calc(50vh - 459.2px / 2 - 128px) 0 0 0;
-    @include mq_pc() {
+    @include mq_sp {
+      padding: calc(50vh - 459.2px / 2 - 128px) 0 0 0;
+    }
+    @include mq_pc {
       display: none;
     }
   }
