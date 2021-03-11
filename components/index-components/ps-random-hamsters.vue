@@ -1,6 +1,9 @@
 <template>
   <div class="ps-random-hamsters">
-    <ps-loader v-if="currentHamstersImageIndex === -1" />
+    <ps-loader
+      v-if="currentHamstersImageIndex === -1"
+      class="ps-random-hamsters__loader"
+    />
     <div v-else>
       <ps-image
         class="ps-random-hamsters__image"
@@ -59,7 +62,13 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-random-hamsters';
 #{$block} {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: -64px 0 -128px 0;
+  &__loader {
+    margin: calc((100vh - 172px) / 2) 0;
+  }
   &__image {
     width: 636px;
     height: 477px;
