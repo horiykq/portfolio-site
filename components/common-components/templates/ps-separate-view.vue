@@ -44,21 +44,37 @@ export default Vue.extend({
   },
 
   head() {
+    const siteName = 'Portfolio of Kaito Horiuchi'
+    const pageUrl = `${domain}${this.browsedPage.path}`
+    const pageTitleForOgp = `${this.browsedPage.metaTitle}｜${siteName}`
+    const description =
+      '大学生エンジニア 堀内 凱登 / Kaito Horiuchi (hori) のポートフォリオサイトです。'
+    const ogpImageUrl = `${domain}/images/ogp.jpg`
     return {
       title: this.browsedPage.metaTitle,
-      titleTemplate: '%s｜Portfolio of Kaito Horiuchi',
+      titleTemplate: `%s｜${siteName}`,
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           hid: 'description',
           name: 'description',
-          content:
-            '大学生エンジニア 堀内 凱登 / Kaito Horiuchi (hori) のポートフォリオサイトです。',
+          content: description,
         },
+        { name: 'og:title', content: pageTitleForOgp },
         { name: 'og:type', content: 'website' },
-        { name: 'og:url', content: `${domain}${this.browsedPage.path}` },
-        { name: 'og:image', content: `${domain}/images/ogp.jpg` },
+        { name: 'og:url', content: pageUrl },
+        { name: 'og:image', content: ogpImageUrl },
+        { name: 'og:image:width', content: '1200' },
+        { name: 'og:image:height', content: '630' },
+        { name: 'og:site_name', content: siteName },
+        { name: 'og:description', content: description },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@horri1520' },
+        { name: 'twitter:title', content: pageTitleForOgp },
+        { name: 'twitter:url', content: pageUrl },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: ogpImageUrl },
       ],
     }
   },
