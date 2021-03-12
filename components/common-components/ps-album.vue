@@ -15,6 +15,7 @@
               : 'ps-album__thumbnail'
           "
           :alt="`${image.alt}のサムネイル`"
+          decoding="async"
         />
       </button>
     </div>
