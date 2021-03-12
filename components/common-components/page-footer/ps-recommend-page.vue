@@ -4,7 +4,11 @@
       <p class="ps-recommend-page__recommend">
         {{ type === 'previous' ? pageFooterArrows.previous : null }}
         {{ mainLabel }}
-        {{ type === 'next' || type === 'previous' ? 'Page' : '' }}
+        {{
+          type === 'next' || type === 'previous'
+            ? 'Page'
+            : pageFooterArrows.next
+        }}
         {{ type === 'next' ? pageFooterArrows.next : null }}
       </p>
       <slot />
