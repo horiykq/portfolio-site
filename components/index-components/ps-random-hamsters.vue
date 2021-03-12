@@ -93,6 +93,9 @@ $block: '.ps-random-hamsters';
   }
   &__promptWrapper {
     margin-top: 16px;
+    @include mq_sp {
+      display: none;
+    }
   }
   &__prompt {
     display: inline-block;
