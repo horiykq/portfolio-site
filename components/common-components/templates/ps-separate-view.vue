@@ -49,7 +49,7 @@ export default Vue.extend({
     const pageTitleForOgp = `${this.browsedPage.metaTitle}｜${siteName}`
     const description =
       '大学生エンジニア 堀内 凱登 / Kaito Horiuchi (hori) のポートフォリオサイトです。'
-    const ogpImageUrl = `${domain}/images/ogp.jpg`
+    const ogpImageUrl = `${domain}/ogp.jpg`
     return {
       title: this.browsedPage.metaTitle,
       titleTemplate: `%s｜${siteName}`,
