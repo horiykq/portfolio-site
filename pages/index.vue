@@ -5,7 +5,6 @@
     </div>
     <div class="ps-index-page__mobile">
       <ps-side-navigation :browsed-page="page" />
-      <ps-random-hamsters />
     </div>
   </ps-separate-view>
 </template>
@@ -44,9 +43,7 @@ $block: '.ps-index-page';
   }
   &__mobile {
     display: inline-block;
-    @include mq_sp {
-      padding: calc(50vh - 459.2px / 2 - 128px) 0 0 0;
-    }
+    padding: calc(50vh - 459.2px / 2 - 128px) 0 0 0;
     @include mq_pc {
       display: none;
     }
