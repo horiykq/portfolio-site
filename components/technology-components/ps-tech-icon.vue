@@ -1,15 +1,10 @@
 <template>
-  <div class="ps-tech-icon">
-    <div class="ps-tech-icon__iconWrapper">
-      <img
-        :class="computedIconClass"
-        :src="iconSrc"
-        :alt="technology.label"
-        decoding="async"
-      />
-    </div>
-    <p class="ps-tech-icon__label">{{ technology.label }}</p>
-  </div>
+  <img
+    :class="computedIconClass"
+    :src="iconSrc"
+    :alt="technology.label"
+    decoding="async"
+  />
 </template>
 
 <script lang="ts">
@@ -129,51 +124,15 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $block: '.ps-tech-icon';
 #{$block} {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 120px;
-  @include mq_sp {
-    width: 96px;
-    height: 96px;
-  }
-  &__iconWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-    @include mq_sp {
-      width: 48px;
-      height: 48px;
-    }
-  }
   &__squareIcon {
-    width: 64px;
-    height: 64px;
-    @include mq_sp {
-      width: 48px;
-      height: 48px;
-    }
-  }
-  &__portraitIcon {
-    height: 64px;
-    @include mq_sp {
-      height: 48px;
-    }
+    width: 100%;
+    height: 100%;
   }
   &__landscapeIcon {
-    width: 64px;
-    @include mq_sp {
-      width: 48px;
-    }
+    width: 100%;
   }
-  &__label {
-    font-weight: 400;
-    margin-top: 6px;
-    @include font-size(1.6);
+  &__portraitIcon {
+    height: 100%;
   }
 }
 </style>

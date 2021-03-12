@@ -7,92 +7,85 @@
     <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
       Frontend
     </ps-second-heading>
-    <div class="ps-tech-experienced__outer">
-      <div class="ps-tech-experienced__inner">
-        <ps-tech-icon
-          v-for="(element, index) in frontend"
-          :key="index"
-          :technology="element"
-        />
-      </div>
+    <div class="ps-tech-experienced__listWrapper">
+      <ps-tech-list
+        v-for="(technology, index) in frontend"
+        :key="index"
+        :technology="technology"
+      />
     </div>
 
     <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
       Backend
     </ps-second-heading>
-    <div class="ps-tech-experienced__outer">
-      <div class="ps-tech-experienced__inner">
-        <ps-tech-icon
-          v-for="(element, index) in backend"
-          :key="index"
-          :technology="element"
-        />
-      </div>
+    <div class="ps-tech-experienced__listWrapper">
+      <ps-tech-list
+        v-for="(technology, index) in backend"
+        :key="index"
+        :technology="technology"
+      />
     </div>
 
     <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
       Other Languages
     </ps-second-heading>
-    <div class="ps-tech-experienced__outer">
-      <div class="ps-tech-experienced__inner">
-        <ps-tech-icon
-          v-for="(element, index) in others"
-          :key="index"
-          :technology="element"
-        />
-      </div>
+    <div class="ps-tech-experienced__listWrapper">
+      <ps-tech-list
+        v-for="(technology, index) in others"
+        :key="index"
+        :technology="technology"
+      />
     </div>
 
     <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
       Hardware
     </ps-second-heading>
-    <div class="ps-tech-experienced__outer">
-      <div class="ps-tech-experienced__inner">
-        <ps-tech-icon
-          v-for="(element, index) in hardware"
-          :key="index"
-          :technology="element"
-        />
-      </div>
+    <div class="ps-tech-experienced__listWrapper">
+      <ps-tech-list
+        v-for="(technology, index) in hardware"
+        :key="index"
+        :technology="technology"
+      />
     </div>
 
     <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
       Machine Learning
     </ps-second-heading>
-    <div class="ps-tech-experienced__outer">
-      <div class="ps-tech-experienced__inner">
-        <ps-tech-icon
-          v-for="(element, index) in machineLearning"
-          :key="index"
-          :technology="element"
-        />
-      </div>
+    <div class="ps-tech-experienced__listWrapper">
+      <ps-tech-list
+        v-for="(technology, index) in machineLearning"
+        :key="index"
+        :technology="technology"
+      />
     </div>
 
     <ps-second-heading class="ps-tech-experienced__h2" :use-en-font="true">
       Infrastructure
     </ps-second-heading>
-    <div class="ps-tech-experienced__outer">
-      <div class="ps-tech-experienced__inner">
-        <ps-tech-icon
-          v-for="(element, index) in infrastructure"
-          :key="index"
-          :technology="element"
-        />
-      </div>
+    <div class="ps-tech-experienced__listWrapper">
+      <ps-tech-list
+        v-for="(technology, index) in infrastructure"
+        :key="index"
+        :technology="technology"
+      />
     </div>
   </ps-section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PsTechIcon from '../ps-tech-icon.vue'
+import PsTechList from '../ps-tech-list.vue'
 import PsFirstHeading from '~/components/common-components/ps-first-heading.vue'
 import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
 import technologies from '~/constants/technologies/index'
 export default Vue.extend({
-  components: { PsSection, PsFirstHeading, PsSecondHeading, PsTechIcon },
+  components: {
+    PsSection,
+    PsFirstHeading,
+    PsSecondHeading,
+    PsTechList,
+  },
 
   data() {
     return {
@@ -124,6 +117,11 @@ $block: '.ps-tech-experienced';
     @include mq_pc {
       width: 600px;
     }
+  }
+  &__listWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 </style>

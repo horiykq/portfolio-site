@@ -10,8 +10,8 @@
         <img
           :src="image.src"
           :class="
-            image === images[choosedImageIndex]
-              ? 'ps-album__thumbnail ps-album__choosedThumbnail'
+            image === images[chosenImageIndex]
+              ? 'ps-album__thumbnail ps-album__chosenThumbnail'
               : 'ps-album__thumbnail'
           "
           :alt="`${image.alt}のサムネイル`"
@@ -20,8 +20,8 @@
     </div>
     <ps-image
       :class="computedImageClass"
-      :src="images[choosedImageIndex].src"
-      :alt="images[choosedImageIndex].alt"
+      :src="images[chosenImageIndex].src"
+      :alt="images[chosenImageIndex].alt"
     />
     <div class="ps-album__controlButtonsWrapper">
       <button :class="computedPreviousButtonClass" @click="onClickPrevious()">
@@ -32,12 +32,12 @@
       </button>
     </div>
     <ps-paragraph>
-      {{ images[choosedImageIndex].description }}
+      {{ images[chosenImageIndex].description }}
     </ps-paragraph>
     <ps-normal-link
-      v-if="images[choosedImageIndex].link != null"
+      v-if="images[chosenImageIndex].link != null"
       class="ps-album__link"
-      :href="images[choosedImageIndex].link"
+      :href="images[chosenImageIndex].link"
     >
       >> ページを見てみる
     </ps-normal-link>
@@ -73,7 +73,7 @@ export default Vue.extend({
 
   data() {
     return {
-      choosedImageIndex: 0,
+      chosenImageIndex: 0,
       controlButtonArrows,
     }
   },
@@ -98,12 +98,12 @@ export default Vue.extend({
       return returnClass
     },
     computedPreviousButtonClass(): string {
-      return this.choosedImageIndex === 0
+      return this.chosenImageIndex === 0
         ? 'ps-album__controlButton ps-album__disabledControlButton'
         : 'ps-album__controlButton'
     },
     computedNextButtonClass(): string {
-      return this.choosedImageIndex === this.images.length - 1
+      return this.chosenImageIndex === this.images.length - 1
         ? 'ps-album__controlButton ps-album__disabledControlButton'
         : 'ps-album__controlButton'
     },
@@ -111,16 +111,16 @@ export default Vue.extend({
 
   methods: {
     onClickThumbnail(index: number) {
-      this.choosedImageIndex = index
+      this.chosenImageIndex = index
     },
     onClickPrevious() {
-      if (this.choosedImageIndex !== 0) {
-        this.choosedImageIndex -= 1
+      if (this.chosenImageIndex !== 0) {
+        this.chosenImageIndex -= 1
       }
     },
     onClickNext() {
-      if (this.choosedImageIndex !== this.images.length - 1) {
-        this.choosedImageIndex += 1
+      if (this.chosenImageIndex !== this.images.length - 1) {
+        this.chosenImageIndex += 1
       }
     },
   },
@@ -151,7 +151,7 @@ $block: '.ps-album';
     border-radius: 4px;
     cursor: pointer;
   }
-  &__choosedThumbnail {
+  &__chosenThumbnail {
     border: 2px solid $color-dark-blue;
   }
   &__image {
