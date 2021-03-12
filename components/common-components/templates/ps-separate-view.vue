@@ -24,6 +24,7 @@ import PsMobileHeader from '../ps-mobile-header.vue'
 import page from '~/types/page'
 import indexPage from '~/constants/pages/index-page'
 import notFoundPage from '~/constants/pages/not-found-page'
+import domain from '~/constants/domain'
 
 export default Vue.extend({
   components: { PsSideNavigation, PsMobileHeader },
@@ -55,6 +56,9 @@ export default Vue.extend({
           content:
             '大学生エンジニア 堀内 凱登 / Kaito Horiuchi (hori) のポートフォリオサイトです。',
         },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:url', content: `${domain}${this.browsedPage.path}` },
+        { name: 'og:image', content: `${domain}/images/ogp.jpg` },
       ],
     }
   },
