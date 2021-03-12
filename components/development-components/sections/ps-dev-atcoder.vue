@@ -14,7 +14,7 @@ import Vue from 'vue'
 import PsAlbum from '~/components/common-components/ps-album.vue'
 import PsSecondHeading from '~/components/common-components/ps-second-heading.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
-import atcoderAlbumImages from '~/constants/album-images/atcoder-album-images'
+import atcoderAlbumImages from '~/constants/album-images/development-albums/atcoder-album-images'
 import imageAspect from '~/types/image-aspect'
 import imageFitting from '~/types/image-fitting'
 export default Vue.extend({

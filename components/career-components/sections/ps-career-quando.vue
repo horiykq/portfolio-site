@@ -27,7 +27,7 @@ import Vue from 'vue'
 import PsCareerTemplate from '../ps-career-template.vue'
 import PsSection from '~/components/common-components/ps-section.vue'
 import PsAlbum from '~/components/common-components/ps-album.vue'
-import quandoAlbumImages from '~/constants/album-images/quando-album-images'
+import quandoAlbumImages from '~/constants/album-images/career-albums/quando-album-images'
 import imageAspect from '~/types/image-aspect'
 import imageFitting from '~/types/image-fitting'
 export default Vue.extend({
