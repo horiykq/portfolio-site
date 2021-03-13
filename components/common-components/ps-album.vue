@@ -148,12 +148,13 @@ $block: '.ps-album';
     width: 64px;
     height: 64px;
     object-fit: cover;
-    border: 2px solid $color-border-gray;
+    border: 3px solid $color-border-gray;
     border-radius: 4px;
     cursor: pointer;
+    padding: 1px;
   }
   &__chosenThumbnail {
-    border: 2px solid $color-dark-blue;
+    border: 3px solid $color-dark-blue;
   }
   &__image {
     margin: 16px 0;
