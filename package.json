@@ -32,7 +32,6 @@
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/now-builder": "^0.17.3",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/vuetify": "^1.11.3",
