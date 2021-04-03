@@ -88,10 +88,11 @@ $block: '.ps-seperate-view';
   width: 100vw;
   &__sidenav {
     position: fixed;
-    top: calc(50vh - 324.13px / 2);
+    top: 0;
     left: 0;
     display: inline-block;
     width: 320px;
+    height: 100vh;
     @include mq_tablet {
       display: none;
     }
