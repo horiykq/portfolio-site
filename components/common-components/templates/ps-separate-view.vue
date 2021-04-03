@@ -118,6 +118,7 @@ $block: '.ps-seperate-view';
     }
   }
   &__contentsInner {
+    display: inline-block;
     width: 100%;
     max-width: 700px;
     padding: 128px 32px;
