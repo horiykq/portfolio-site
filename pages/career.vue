@@ -11,6 +11,7 @@
     <ps-career-quando />
     <ps-career-regnio />
     <ps-career-note />
+    <ps-career-ca />
 
     <ps-page-footer :previous-page="previousPage" :next-page="nextPage" />
   </ps-separate-view>
@@ -18,6 +19,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import PsCareerCa from '~/components/career-components/sections/ps-career-ca.vue'
 import PsCareerNote from '~/components/career-components/sections/ps-career-note.vue'
 import PsCareerQu from '~/components/career-components/sections/ps-career-qu.vue'
 import PsCareerQuando from '~/components/career-components/sections/ps-career-quando.vue'
@@ -39,6 +41,7 @@ export default Vue.extend({
     PsPageHeader,
     PsFirstHeading,
     PsPageFooter,
+    PsCareerCa,
   },
 
   data() {

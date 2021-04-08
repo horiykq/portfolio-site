@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: $jp-font;
   background: $color-white;
   color: $color-default-black;
 }
