@@ -1,7 +1,7 @@
 <template>
   <ps-section class="ps-career-qu">
     <ps-paragraph>
-      現在、九州大学 経済学部の2年生（23卒）。
+      現在、九州大学 経済学部の3年生（23卒）。
       ゼミにおいては、機械学習モデルやアルゴリズムを用いたデータ解析について学ぶ予定。
     </ps-paragraph>
   </ps-section>
