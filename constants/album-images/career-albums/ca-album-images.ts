@@ -12,7 +12,7 @@ const caAlbumImages: albumImage[] = [
     src: '/images/2021-03-28 (12).png',
     alt: '開発したショッピングサイト',
     description:
-      'Nuxt.jsをVercelにデプロイし、SSR(Server Side Rendering)している。動的ルーティングで製品詳細を表示するページや、ローディング中のスケルトンなども実装した。',
+      'Nuxt.jsで開発、Vercelにデプロイし、SSR(Server Side Rendering)している。動的ルーティングで製品詳細を表示するページや、ローディング中のスケルトンなども実装した。',
     link: null,
   },
   {
